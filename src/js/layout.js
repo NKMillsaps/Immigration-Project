@@ -4,6 +4,8 @@ import ScrollToTop from "./component/scrollToTop";
 
 //views
 import { Home } from "./views/home";
+import { Form } from "./views/form";
+import { Doctors } from "./views/doctors";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -27,6 +29,8 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
+							<Route exact path="/form" component={Form} />
+							<Route exact path="/doctors" component={Doctors} />
 							<Route path="/demo" component={Demo} />
 							<Route path="/options" component={Options} />
 							<Route path="/single/:theid" component={Single} />

@@ -1,6 +1,7 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import { Link } from "react-router-dom";
 
 export class Home extends React.Component {
 	render() {
@@ -13,6 +14,23 @@ export class Home extends React.Component {
 						eligibility requirements may vary depending on the immigrant category you are applying under. Go
 						to our Green Card Eligibility Categories page to see all the possible categories you can apply
 						under and what the eligibility requirements are.
+					</p>
+					<p className="text-center">
+						<Link to="/form">
+							<button className="btn btn-primary">Apply for Student Visa with Family (F1)</button>
+						</Link>
+					</p>
+					<p className="text-center">
+						<Link to="/form">
+							<button className="btn btn-primary">Apply for Student Visa without Family (F2)</button>
+						</Link>
+					</p>{" "}
+					<p className="text-center">
+						<Link to="/studentnotsure">
+							<button className="btn btn-primary">
+								Apply for Student Visa (Not sure where to start)
+							</button>
+						</Link>
 					</p>
 				</div>
 			</div>
