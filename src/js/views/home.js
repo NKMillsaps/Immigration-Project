@@ -6,15 +6,21 @@ import { Link } from "react-router-dom";
 export class Home extends React.Component {
 	render() {
 		return (
-			<div className="text-justify mt-5">
+			<div className="text-justify">
 				<div className="container ">
-					<h1 className="font-weight-bold text-center">DIY Application</h1>
-					<p>
-						U.S. immigration laws provide a variety of ways for people to apply for a Green Card. The
-						eligibility requirements may vary depending on the immigrant category you are applying under. Go
-						to our Green Card Eligibility Categories page to see all the possible categories you can apply
-						under and what the eligibility requirements are.
-					</p>
+					<div className="jumbotron jumbotron-fluid">
+						<div className="container">
+							<h1 className="font-weight-bold text-center">DIY Application</h1>
+							<p className="lead">
+								<small>
+									U.S. immigration laws provide a variety of ways for people to apply for a Green
+									Card. The eligibility requirements may vary depending on the immigrant category you
+									are applying under. Go to our Green Card Eligibility Categories page to see all the
+									possible categories you can apply under and what the eligibility requirements are.
+								</small>
+							</p>
+						</div>
+					</div>
 					<p className="text-center">
 						<Link to="/form">
 							<button className="btn btn-primary">Apply for Student Visa with Family (F1)</button>
