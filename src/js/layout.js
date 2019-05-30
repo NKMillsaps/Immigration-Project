@@ -42,9 +42,9 @@ export class Layout extends React.Component {
 									<Route path="/single/:theid" component={Single} />
 									<Route render={() => <h1>Not found!</h1>} />
 								</Switch>
-								<Footer />
 							</div>
 						</div>
+						<Footer />
 					</ScrollToTop>
 				</BrowserRouter>
 			</div>
