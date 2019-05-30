@@ -9,6 +9,9 @@ export class Doctors extends React.Component {
 				<div className="container ">
 					<h1 className="font-weight-bold text-center">DOCTORS</h1>
 					<p>THE LIST</p>
+					<p>
+						<a href="https://my.uscis.gov/findadoctor">Find a doctor</a>
+					</p>
 				</div>
 			</div>
 		);

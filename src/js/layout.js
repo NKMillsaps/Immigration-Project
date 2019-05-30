@@ -13,6 +13,7 @@ import { Options } from "./views/options";
 
 // components
 import { Navbar } from "./component/navbar";
+import { NavbarSideLeft } from "./component/navbarSideLeft";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -27,6 +28,7 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Navbar />
+						<NavbarSideLeft />
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route exact path="/form" component={Form} />
