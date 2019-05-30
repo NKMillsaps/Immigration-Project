@@ -10,7 +10,10 @@ export class Options extends React.Component {
 				<div className="card-deck">
 					<div className="card">
 						<div className="card-body">
-							<h5 className="card-title">Student Visa F1 (academic), F2 (students with families)</h5>
+							<h5 className="card-title">
+								Student Visa F1 (academic) <br />
+								F2 (students with families)
+							</h5>
 							<p className="card-text">
 								If you wish to pursue full-time academic or vocational studies in the United States, you
 								may be eligible for one of two nonimmigrant student categories. The “F” category is for
@@ -26,11 +29,13 @@ export class Options extends React.Component {
 
 					<div className="card">
 						<div className="card-body">
-							<h5 className="card-title">Extend stay</h5>
+							<h5 className="card-title">I-539, Application To Extend/Change Nonimmigrant Status</h5>
 							<p className="card-text">
-								This is a wider card with supporting text below as a natural lead-in to additional
-								content. This card has even longer content than the first to show that equal height
-								action.
+								You should use this application if you are one of the nonimmigrants listed below and
+								wish to apply to U.S. Citizenship and Immigration Services (USCIS) for an extension of
+								stay or a change to another nonimmigrant status. In certain situations, you may use this
+								application to apply for an initial nonimmigrant status. You may also use this
+								application if you are a nonimmigrant F-1 or M-1 student applying for reinstatement.
 							</p>
 							<p className="card-text">
 								<button className="btn btn-primary">Continue</button>
