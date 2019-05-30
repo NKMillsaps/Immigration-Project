@@ -17,10 +17,10 @@ export class Home extends React.Component {
 									<small>
 										<em>
 											U.S. immigration laws provide a variety of ways for people to apply for a
-											Green Card. The eligibility requirements may vary depending on the immigrant
-											category you are applying under. Go to our Green Card Eligibility Categories
-											page to see all the possible categories you can apply under and what the
-											eligibility requirements are.
+											Studen Visa. The eligibility requirements may vary depending on the
+											immigrant category you are applying under. Go to our Green Card Eligibility
+											Categories page to see all the possible categories you can apply under and
+											what the eligibility requirements are.
 										</em>
 									</small>
 								</p>
@@ -30,23 +30,6 @@ export class Home extends React.Component {
 					<div>
 						<Options />
 					</div>
-					<p className="text-center">
-						<Link to="/form">
-							<button className="btn btn-primary">Apply for Student Visa with Family (F1)</button>
-						</Link>
-					</p>
-					<p className="text-center">
-						<Link to="/form">
-							<button className="btn btn-primary">Apply for Student Visa without Family (F2)</button>
-						</Link>
-					</p>{" "}
-					<p className="text-center">
-						<Link to="/studentnotsure">
-							<button className="btn btn-primary">
-								Apply for Student Visa (Not sure where to start)
-							</button>
-						</Link>
-					</p>
 				</div>
 			</div>
 		);

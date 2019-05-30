@@ -10,6 +10,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Options } from "./views/options";
+import { Modalf1 } from "./views/modalf1";
 
 // components
 import { Navbar } from "./component/navbar";
@@ -39,6 +40,7 @@ export class Layout extends React.Component {
 									<Route exact path="/doctors" component={Doctors} />
 									<Route path="/demo" component={Demo} />
 									<Route path="/options" component={Options} />
+									<Route path="/modalf1" component={Modalf1} />
 									<Route path="/single/:theid" component={Single} />
 									<Route render={() => <h1>Not found!</h1>} />
 								</Switch>

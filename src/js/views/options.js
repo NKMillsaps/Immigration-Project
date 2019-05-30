@@ -2,6 +2,7 @@ import React from "react";
 
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
+import { Modalf1 } from "../views/modalf1.js";
 
 export class Options extends React.Component {
 	render() {
@@ -10,26 +11,42 @@ export class Options extends React.Component {
 				<div className="card-deck">
 					<div className="card">
 						<div className="card-body">
-							<h5 className="card-title">
-								Student Visa F1 (academic) <br />
-								F2 (students with families)
-							</h5>
+							<h2 className="card-title">
+								<u>
+									Academic Student Visa F1 <br />
+									Vocational Students Visa M1
+								</u>
+							</h2>
 							<p className="card-text">
 								If you wish to pursue full-time academic or vocational studies in the United States, you
 								may be eligible for one of two nonimmigrant student categories. The “F” category is for
-								academic students and the “M” is for vocational students. To learn more, please see the
-								Students and Exchange Visitors Program Web page on the U.S. Immigration and Customs
-								Enforcement&#39;s website.
+								academic students and the “M” is for vocational students. To learn more about “F”
+								category please click here. If you are intetersted in Vocational Student Visa, please
+								click here to find more information.
 							</p>
-							<p className="card-text">
-								<button className="btn btn-primary">Continue</button>
+							<p className="text-center">
+								<Link to="/form">
+									<button className="btn btn-primary">Apply for Student Visa with Family (F1)</button>
+								</Link>
 							</p>
+							<p className="text-center">
+								<Link to="/form">
+									<button className="btn btn-primary">
+										Apply for Student Visa without Family (F2)
+									</button>
+								</Link>
+							</p>{" "}
 						</div>
 					</div>
 
 					<div className="card">
 						<div className="card-body">
-							<h5 className="card-title">I-539, Application To Extend/Change Nonimmigrant Status</h5>
+							<h2 className="card-title">
+								<u>
+									Application To Extend or Change <brake />
+									Nonimmigrant Status
+								</u>
+							</h2>
 							<p className="card-text">
 								You should use this application if you are one of the nonimmigrants listed below and
 								wish to apply to U.S. Citizenship and Immigration Services (USCIS) for an extension of
