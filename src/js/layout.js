@@ -28,17 +28,23 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Navbar />
-						<NavbarSideLeft />
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route exact path="/form" component={Form} />
-							<Route exact path="/doctors" component={Doctors} />
-							<Route path="/demo" component={Demo} />
-							<Route path="/options" component={Options} />
-							<Route path="/single/:theid" component={Single} />
-							<Route render={() => <h1>Not found!</h1>} />
-						</Switch>
-						<Footer />
+						<div className="row">
+							<div className="col-2 p-0">
+								<NavbarSideLeft />
+							</div>
+							<div className="col p-0">
+								<Switch>
+									<Route exact path="/" component={Home} />
+									<Route exact path="/form" component={Form} />
+									<Route exact path="/doctors" component={Doctors} />
+									<Route path="/demo" component={Demo} />
+									<Route path="/options" component={Options} />
+									<Route path="/single/:theid" component={Single} />
+									<Route render={() => <h1>Not found!</h1>} />
+								</Switch>
+								<Footer />
+							</div>
+						</div>
 					</ScrollToTop>
 				</BrowserRouter>
 			</div>
