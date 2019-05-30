@@ -10,7 +10,7 @@ export class Navbar extends React.Component {
 				</Link>
 				<div className="ml-auto">
 					<Link to="/demo">
-						<button className="btn btn-primary fa fa-fw fa-user m-3">Login/Register</button>
+						<button className="btn btn-primary m-3">Login/Register</button>
 					</Link>
 					<Link to="/options">
 						<button className="btn btn-primary">Languages</button>

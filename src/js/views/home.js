@@ -2,24 +2,63 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
+import { Options } from "../views/options.js";
 
 export class Home extends React.Component {
 	render() {
 		return (
 			<div className="text-justify">
+				<div className="d-none d-xl-block col-xl-2 bd-toc text-left">
+					<ul className="section-nav">
+						<li className="toc-entry toc-h2">
+							<a href="#how-it-works">Contacts</a>
+						</li>
+						<li className="toc-entry toc-h2">
+							<Link to="/doctors">
+								<a href="#grid-options">Medical Professionals</a>
+							</Link>
+						</li>
+
+						<li className="toc-entry toc-h2">
+							<a href="#responsive-classes">Translators</a>
+							<ul>
+								<li className="toc-entry toc-h3">
+									<a href="#all-breakpoints">Spanish</a>
+								</li>
+								<li className="toc-entry toc-h3">
+									<a href="#all-breakpoints">Russian</a>
+								</li>
+							</ul>
+						</li>
+						<li className="toc-entry toc-h2">
+							<a href="#grid-options" />
+							<p>
+								<a href="https://www.uscis.gov">USCIS</a>
+							</p>
+						</li>
+					</ul>
+				</div>
 				<div className="container ">
 					<div className="jumbotron jumbotron-fluid">
-						<div className="container">
-							<h1 className="font-weight-bold text-center">DIY Application</h1>
-							<p className="lead">
-								<small>
-									U.S. immigration laws provide a variety of ways for people to apply for a Green
-									Card. The eligibility requirements may vary depending on the immigrant category you
-									are applying under. Go to our Green Card Eligibility Categories page to see all the
-									possible categories you can apply under and what the eligibility requirements are.
-								</small>
-							</p>
+						<div className="container shadow-lg p-3 mb-5 rounded">
+							<div className="container">
+								<h1 className="font-weight-bold text-center">DIY Application</h1>
+								<p className="lead">
+									<small>
+										<em>
+											U.S. immigration laws provide a variety of ways for people to apply for a
+											Green Card. The eligibility requirements may vary depending on the immigrant
+											category you are applying under. Go to our Green Card Eligibility Categories
+											page to see all the possible categories you can apply under and what the
+											eligibility requirements are.
+										</em>
+									</small>
+								</p>
+							</div>
 						</div>
+					</div>
+					<div>
+						<Options />
 					</div>
 					<p className="text-center">
 						<Link to="/form">

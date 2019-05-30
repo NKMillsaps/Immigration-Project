@@ -1,5 +1,5 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 
@@ -7,38 +7,7 @@ export class Options extends React.Component {
 	render() {
 		return (
 			<div className="text-center mt-5">
-				<h1>OPTIONS</h1>
 				<div className="card-deck">
-					<div className="d-none d-xl-block col-xl-2 bd-toc text-left">
-						<ul className="section-nav">
-							<li className="toc-entry toc-h2">
-								<a href="#how-it-works">Contacts</a>
-							</li>
-							<li className="toc-entry toc-h2">
-								<a href="#grid-options">Medical Professionals</a>
-							</li>
-
-							<li className="toc-entry toc-h2">
-								<a href="#responsive-classes">Translators</a>
-								<ul>
-									<li className="toc-entry toc-h3">
-										<a href="#all-breakpoints">Spanish</a>
-									</li>
-									<li className="toc-entry toc-h3">
-										<a href="#all-breakpoints">Russian</a>
-									</li>
-								</ul>
-							</li>
-							<li className="toc-entry toc-h2">
-								<a href="#grid-options">USCIS</a>
-							</li>
-
-							<Link to="/doctors">
-								<p className="btn btn-primary">Doctors</p>
-							</Link>
-						</ul>
-					</div>
-
 					<div className="card">
 						<div className="card-body">
 							<h5 className="card-title">
@@ -55,6 +24,7 @@ export class Options extends React.Component {
 							</p>
 						</div>
 					</div>
+
 					<div className="card">
 						<div className="card-body">
 							<h5 className="card-title">Student Visa F1 (academic), F2 (students with families)</h5>
