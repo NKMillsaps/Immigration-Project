@@ -110,6 +110,17 @@ export class Form extends React.Component {
 									required
 								/>
 							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+
 							<div className="col-md-3 mb-3">
 								<label htmlFor="inputState">State</label>
 								<select id="inputState" className="form-control required">
@@ -175,6 +186,116 @@ export class Form extends React.Component {
 									className="form-control"
 									id="validationDefault05"
 									placeholder="Zip"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
+									required
+								/>
+							</div>
+							<div className="col-md-6 mb-3">
+								<label htmlFor="validationDefault03">City</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City"
 									required
 								/>
 							</div>
