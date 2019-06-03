@@ -17,7 +17,7 @@ export class Demo extends React.Component {
 									<form key={index}>
 										<div className="form-group row">
 											<label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
-												Email
+												{item.title}
 											</label>
 											<div className="col-sm-10">
 												<input

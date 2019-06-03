@@ -21,7 +21,7 @@ export class Form extends React.Component {
 								/>
 							</div>
 							<div className="col-md-4 mb-3">
-								<label htmlFor="validationDefault02">First name</label>
+								<label htmlFor="validationDefault02">First Name</label>
 								<input
 									type="text"
 									className="form-control"
@@ -32,7 +32,7 @@ export class Form extends React.Component {
 								/>
 							</div>
 							<div className="col-md-4 mb-3">
-								<label htmlFor="validationDefault02">Middle name (patronimic)</label>
+								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
 								<input
 									type="text"
 									className="form-control"
@@ -44,7 +44,7 @@ export class Form extends React.Component {
 							</div>
 						</div>
 						<div className="form-group">
-							<label htmlFor="inputAddress">U.S. Mailing address</label>
+							<label htmlFor="inputAddress">U.S. Mailing Address</label>
 							<input
 								type="text"
 								className="form-control"
@@ -53,43 +53,29 @@ export class Form extends React.Component {
 							/>
 						</div>
 						<div className="form-group">
-							<div className="custom-control custom-checkbox">
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
-								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Apt.
-								</label>
-							</div>
-							<div className="custom-control custom-checkbox">
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
-								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Ste.
-								</label>
-							</div>
-							<div className="custom-control custom-checkbox">
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
-								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Flr.
-								</label>
-							</div>
-						</div>
-						<div className="form-group">
-							<label htmlFor="inputAddress2">Address 2</label>
-							<input type="text" className="form-control" id="inputAddress2" />
+							<form>
+								<div className="checkbox">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Apartment
+									</label>
+								</div>
+								<div className="checkbox">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Suite
+									</label>
+								</div>
+								<div className="checkbox">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Floor
+									</label>
+								</div>
+							</form>
 						</div>
 						<div className="form-row">
 							<div className="col-md-6 mb-3">
@@ -176,44 +162,31 @@ export class Form extends React.Component {
 							/>
 						</div>
 						<div className="form-group">
-							<div className="custom-control custom-checkbox">
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
-								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Apt.
-								</label>
-							</div>
-							<div className="custom-control custom-checkbox">
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
-								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Ste.
-								</label>
-							</div>
-							<div className="custom-control custom-checkbox">
-								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
-								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Flr.
-								</label>
-							</div>
+							<form>
+								<div className="checkbox">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Apartment
+									</label>
+								</div>
+								<div className="checkbox">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Suite
+									</label>
+								</div>
+								<div className="checkbox">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Floor
+									</label>
+								</div>
+							</form>
 						</div>
-						<div className="form-group">
-							<label htmlFor="inputAddress2">Address 2</label>
-							<input type="text" className="form-control" id="inputAddress2" />
-						</div>
+
 						<div className="form-row">
 							<div className="col-md-6 mb-3">
 								<label htmlFor="validationDefault03">City/Town</label>
@@ -289,156 +262,166 @@ export class Form extends React.Component {
 								/>
 							</div>
 						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Country of Birth</label>
-							<input
-								type="text"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="Country of birth"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Country of Nationality/Citizenship</label>
-							<input
-								type="text"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="Nationality/Citizenship"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Date of Birth</label>
-							<input
-								type="date"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="MM/DD/YYYY"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Date of your last arrival to the U.S.</label>
-							<input
-								type="date"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="MM/DD/YYYY"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">I-94 Number</label>
-							<input
-								type="number"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="I-94"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Passport/Travel Document Series/Number</label>
-							<input
-								type="text/number"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="Passport/Travel Document"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Country of Passport Issuance</label>
-							<input
-								type="text"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="Country of Issuance"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Passport Expiration Date</label>
-							<input
-								type="date"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="Passport Valid til"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Current Type of Visa</label>
-							<input
-								type="text"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="B1/2, F1/2, M1/2"
-								required
-							/>
-						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">Visa Expiration Date</label>
-							<input
-								type="date"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="MM/DD/YYYY"
-								required
-							/>
-						</div>
-						<div className="form-group">
-							<label htmlFor="inputAddress">Physical address in Your Home Country</label>
-							<input type="text" className="form-control" id="inputAddress" placeholder="Country" />
-						</div>
-						<div className="form-group">
-							<div className="custom-control custom-checkbox">
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Date of Birth</label>
 								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
+									type="date"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="MM/DD/YYYY"
+									required
 								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Apt.
-								</label>
 							</div>
-							<div className="custom-control custom-checkbox">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Country of Birth</label>
 								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Country of birth"
+									required
 								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Ste.
-								</label>
 							</div>
-							<div className="custom-control custom-checkbox">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Country of Nationality/Citizenship</label>
 								<input
-									type="checkbox"
-									className="custom-control-input"
-									id="customCheck1"
-									defaultChecked
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Nationality/Citizenship"
+									required
 								/>
-								<label className="custom-control-label" htmlFor="customCheck1">
-									Flr.
-								</label>
 							</div>
-						</div>
-						<div className="form-group">
-							<label htmlFor="inputAddress2">Address 2</label>
-							<input type="text" className="form-control" id="inputAddress2" />
 						</div>
 						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Passport/Travel Document Series/Number</label>
+								<input
+									type="text/number"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Passport/Travel Document"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Country of Passport Issuance</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Country of Issuance"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Passport Expiration Date</label>
+								<input
+									type="date"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Passport Valid til"
+									required
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Date of your last arrival to the U.S.</label>
+								<input
+									type="date"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="MM/DD/YYYY"
+									required
+								/>
+							</div>
+
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">
+									I-94 Number (You can get the copy of I-94{" "}
+									<a
+										href="https://i94.cbp.dhs.gov/I94/#/recent-search"
+										target="_blank"
+										rel="noopener noreferrer">
+										<u>here</u>
+									</a>
+									.)
+								</label>
+								<input
+									type="number"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="I-94"
+									required
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Current Type of Visa</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="B1/2, F1/2, M1/2"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Visa Expiration Date</label>
+								<input
+									type="date"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="MM/DD/YYYY"
+									required
+								/>
+							</div>
+						</div>
+
+						<div className="form-group">
+							<label htmlFor="inputAddress">Physical Address in Your Home Country</label>
+							<input type="text" className="form-control" id="inputAddress" placeholder="Address" />
+						</div>
+
+						<form className="row">
 							<div className="col-md-6 mb-3">
+								{" "}
+								<div className="checkbox-inline">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Apartment
+									</label>
+								</div>
+								<div className="checkbox-inline">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Suite
+									</label>
+								</div>
+								<div className="checkbox-inline">
+									<label>
+										<input type="checkbox" value="" />
+										{"  "}
+										Floor
+									</label>
+								</div>
+							</div>{" "}
+							<div className="col-md-6 mb-3">
+								<input type="text" className="form-control" id="inputAddress2" />
+							</div>
+						</form>
+						<div className="form-row">
+							<div className="col-md mb-3">
 								<label htmlFor="validationDefault03">City/Town/Village</label>
 								<input type="text" className="form-control" id="validationDefault03" required />
 							</div>
 
-							<div className="col-md-6 mb-3">
+							<div className="col-md mb-3">
 								<label htmlFor="validationDefault03">Region/Distric/Area/Province</label>
 								<input
 									type="number"
@@ -448,43 +431,34 @@ export class Form extends React.Component {
 									required
 								/>
 							</div>
-							<div className="col-md-3 mb-3">
-								<label htmlFor="validationDefault05">Postal code</label>
-								<input
-									type="number"
-									className="form-control"
-									id="validationDefault05"
-									placeholder="Postal code"
-									required
-								/>
-							</div>
-							<div className="col-md-6 mb-3">
-								<label htmlFor="validationDefault03">Country</label>
-								<input
-									type="text"
-									className="form-control"
-									id="validationDefault03"
-									placeholder="Country"
-									required
-								/>
+							<div className="form-row">
+								<div className="col-md mb-3">
+									<label htmlFor="validationDefault05">Postal code</label>
+									<input
+										type="number"
+										className="form-control"
+										id="validationDefault05"
+										placeholder="Postal code"
+										required
+									/>
+								</div>
+								<div className="col-md mb-3">
+									<label htmlFor="validationDefault03">Country</label>
+									<input
+										type="text"
+										className="form-control"
+										id="validationDefault03"
+										placeholder="Country"
+										required
+									/>
+								</div>
 							</div>
 						</div>
-						<div className="col-md-6 mb-3">
-							<label htmlFor="validationDefault03">City</label>
-							<input
-								type="text"
-								className="form-control"
-								id="validationDefault03"
-								placeholder="City"
-								required
-							/>
-						</div>
-
 						<form>
 							<p>PART 4</p>
 							<fieldset className="form-group">
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										3. Are you, or any other person included on the application, an applicant for an
 										immigration visa?
 									</legend>
@@ -517,7 +491,7 @@ export class Form extends React.Component {
 									</div>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										4. Has an immigrant petition EVER been filed for you or for any other person
 										included in this application?
 									</legend>
@@ -550,7 +524,7 @@ export class Form extends React.Component {
 									</div>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										5. Has Form I-485 EVER been filed by you or by any other person in this
 										application?
 									</legend>
@@ -583,7 +557,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										6. Have you, or any other person included in this application, EVER been
 										arrested or convicted of any crime offense since last entering the United
 										States?
@@ -616,15 +590,15 @@ export class Form extends React.Component {
 										</div>
 									</div>
 								</div>{" "}
-								<div className="col-md-10">
-									<p>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
 										7. Have you, or other person included in this application, EVER ordered,
 										incited, called for, committed, assisted, helped with, or otherwise participated
 										in any of the following:
-									</p>
+									</legend>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										7.a. Acts involving torture or genocide?
 									</legend>
 									<div className="col-md-10">
@@ -656,7 +630,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">7.b. Killing any person?</legend>
+									<legend className="col-form-label  pt-0">7.b. Killing any person?</legend>
 									<div className="col-md-10">
 										<div className="form-check">
 											<input
@@ -686,7 +660,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										7.c. Intentionally and severely injuring any person?
 									</legend>
 									<div className="col-md-10">
@@ -718,7 +692,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										7.d. Engaging in any kind of sexual contact or relations with any person who did
 										not consent or was unable to consent, or was beaing forced or threatened?
 									</legend>
@@ -751,7 +725,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										7.e. Limiting or denying any person&#39;s ability to exercise religious beliefs?
 									</legend>
 									<div className="col-md-10">
@@ -782,11 +756,13 @@ export class Form extends React.Component {
 										</div>
 									</div>
 								</div>{" "}
-								<div className="col-md-10">
-									<p>8. Have you, or other person included on this application, EVER:</p>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										8. Have you, or other person included on this application, EVER:
+									</legend>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										8.a. Served in, been a member of, assisted, or participated in any military
 										unit, police unit, self-defence unit, vigilante unit, rebel group, guerilla
 										group, militia, insurgent organization, or any other armed group?
@@ -820,7 +796,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										8.b. Worked, volunteered, or otherwise served in any person, jail, prison camp,
 										detention facility, labor camp, or any other situation that involved detaining
 										people?
@@ -854,7 +830,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										9. Have you, or other person included in this application, EVER been a member
 										of, assisted, or participated in any group, unit, or organization of any kind in
 										which you or other person used type of weapon against people or threatened to do
@@ -889,7 +865,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										10. Have you, or other person inculded in this application, EVER assisted or
 										participated in selling, providing, or transporting weapons to any person who,
 										to your knowledge, used them against another people?
@@ -923,7 +899,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										11. Have you, or other person inculded in this application, EVER recieved any
 										type of military, paramilitary, or weapons training?
 									</legend>
@@ -956,7 +932,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										12. Have you, or other person included in this application, done anything that
 										violated the terms of the nonimmigrant status you now hold?
 									</legend>
@@ -989,7 +965,7 @@ export class Form extends React.Component {
 									</div>
 								</div>{" "}
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										13. Are you, or other person included in this application, now in removal
 										proceedings?
 									</legend>
@@ -1021,15 +997,24 @@ export class Form extends React.Component {
 										</div>
 									</div>
 								</div>{" "}
-								<div className="col-md-10">
-									<p>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
 										Part 8. Additional Information. If you answered {'"YES"'} to Number 13, provide
 										the name of the person in removal proceedings and information on jurisdiction,
 										date proceedings began, and status of proceedings.
-									</p>
+										<div className="col-form-label  pt-0">
+											<label htmlFor="exampleFormControlTextarea1" />
+											<textarea
+												className="form-control"
+												id="exampleFormControlTextarea1"
+												rows={5}
+												defaultValue={""}
+											/>
+										</div>
+									</legend>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label pt-0">
 										14. Have you, or other person included in this application, been employed in the
 										United States since last admited or granted an extension or change of status?
 									</legend>
@@ -1061,23 +1046,40 @@ export class Form extends React.Component {
 										</div>
 									</div>
 								</div>{" "}
-								<div className="col-md-10">
-									<p>
-										Part 8. Edditional Information. If you answered {'"NO"'} fully describe how you
-										are supported yourself, including documentary evidence of the source, amount
-										earned, and basis of any income.
-									</p>
-								</div>
-								<div className="col-md-10">
-									<p>
-										Part 8. Edditional Information. If you answered {'"YES"'} fully describe your
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Additional Information. If you answered {'"NO"'} fully describe how you are
+										supported yourself, including documentary evidence of the source, amount earned,
+										and basis of any income.
+										<div className="col-form-label  pt-0">
+											<label htmlFor="exampleFormControlTextarea1" />
+											<textarea
+												className="form-control"
+												id="exampleFormControlTextarea1"
+												rows={5}
+												defaultValue={""}
+											/>
+										</div>
+									</legend>
+
+									<legend className="col-form-label  pt-0">
+										Additional Information. If you answered {'"YES"'} fully describe your
 										employment, including the name of the person employed, name and address of the
 										employer, weekly income, and whether the employer was specifically authorized by
 										USCIS.
-									</p>
+										<div className="col-form-label  pt-0">
+											<label htmlFor="exampleFormControlTextarea1" />
+											<textarea
+												className="form-control"
+												id="exampleFormControlTextarea1"
+												rows={5}
+												defaultValue={""}
+											/>
+										</div>
+									</legend>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										15. Are you, or other person included on the application, currently or have you
 										ever been a J-1 exchange visitor or a J-2 dependant of a J-1 exchange visitor?
 									</legend>
@@ -1116,7 +1118,7 @@ export class Form extends React.Component {
 									</p>
 								</div>
 								<div className="row">
-									<legend className="col-form-label col-md-5 pt-0">
+									<legend className="col-form-label  pt-0">
 										Are you, or any other person included on the application, an applicant for an
 										immigration visa?
 									</legend>
