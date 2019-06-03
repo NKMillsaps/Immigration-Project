@@ -6,10 +6,10 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="navbar sticky-top navbar-light bg-light mb-3">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">DYI Immigration</span>
+					<span className="navbar-brand mb-0 h1">DIY Immigration</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/options">
+					<Link to="/modalf1">
 						<button className="btn btn-primary">Languages</button>
 					</Link>
 					<Link to="/form">
