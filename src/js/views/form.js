@@ -10,13 +10,12 @@ export class Form extends React.Component {
 						<p>Part 1</p>
 						<div className="form-row">
 							<div className="col-md-4 mb-3">
-								<label htmlFor="validationDefault01">Last name (Family name)</label>
+								<label htmlFor="validationDefault01">Last Name (Family name)</label>
 								<input
 									type="text"
 									className="form-control"
 									id="validationDefault01"
 									placeholder="Last name"
-									value="Last name"
 									required
 								/>
 							</div>
@@ -27,7 +26,6 @@ export class Form extends React.Component {
 									className="form-control"
 									id="validationDefault02"
 									placeholder="First name"
-									value="Last name"
 									required
 								/>
 							</div>
@@ -38,11 +36,38 @@ export class Form extends React.Component {
 									className="form-control"
 									id="validationDefault02"
 									placeholder="Middle name"
-									value="Middle name"
 									required
 								/>
 							</div>
 						</div>
+						<div className="form-row">
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault01">Daytime Phone Number</label>
+								<input
+									type="tel"
+									className="form-control"
+									id="validationDefault01"
+									placeholder="123-456-7890"
+									maxLength="12"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault02">Mobile Phone Number</label>
+								<input
+									type="tel"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="123-456-7890"
+									maxLength="12"
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="inputEmail">Email Address (if any)</label>
+								<input type="email" className="form-control" id="inputEmail" placeholder="email" />
+							</div>
+						</div>
+
 						<div className="form-group">
 							<label htmlFor="inputAddress">U.S. Mailing Address</label>
 							<input
@@ -54,25 +79,26 @@ export class Form extends React.Component {
 						</div>
 						<div className="form-group">
 							<form>
-								<div className="checkbox">
+								<div className="checkbox-inline">
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
-										Apartment
+										Apartment <input type="apt" className="form-control" id="apartment" />
 									</label>
 								</div>
-								<div className="checkbox">
+								<div className="checkbox-inline">
 									<label>
+										{" "}
 										<input type="checkbox" value="" />
 										{"  "}
-										Suite
+										Suite <input type="ste" className="form-control" id="suite" />
 									</label>
 								</div>
-								<div className="checkbox">
+								<div className="checkbox-inline">
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
-										Floor
+										Floor <input type="floor" className="form-control" id="floor" />
 									</label>
 								</div>
 							</form>
@@ -87,7 +113,7 @@ export class Form extends React.Component {
 								<label htmlFor="inputState">State</label>
 								<select id="inputState" className="form-control required">
 									<option selected>Choose...</option>
-									<option value="AL">Alabama</option>
+									<option value="AL">AL</option>
 									<option value="AK">Alaska</option>
 									<option value="AZ">Arizona</option>
 									<option value="AR">Arkansas</option>
@@ -98,11 +124,11 @@ export class Form extends React.Component {
 									<option value="DC">District Of Columbia</option>
 									<option value="FL">Florida</option>
 									<option value="GA">Georgia</option>
-									<option value="HI">Hawaii</option>
+									<option value="HI">HI</option>
 									<option value="ID">Idaho</option>
 									<option value="IL">Illinois</option>
 									<option value="IN">Indiana</option>
-									<option value="IA">Iowa</option>
+									<option value="IA">IA</option>
 									<option value="KS">Kansas</option>
 									<option value="KY">Kentucky</option>
 									<option value="LA">Louisiana</option>
@@ -120,7 +146,7 @@ export class Form extends React.Component {
 									<option value="NJ">New Jersey</option>
 									<option value="NM">New Mexico</option>
 									<option value="NY">New York</option>
-									<option value="NC">North Carolina</option>
+									<option value="NC">NC</option>
 									<option value="ND">North Dakota</option>
 									<option value="OH">Ohio</option>
 									<option value="OK">Oklahoma</option>
@@ -130,12 +156,12 @@ export class Form extends React.Component {
 									<option value="SC">South Carolina</option>
 									<option value="SD">South Dakota</option>
 									<option value="TN">Tennessee</option>
-									<option value="TX">Texas</option>
+									<option value="TX">Vermontxas</option>
 									<option value="UT">Utah</option>
-									<option value="VT">Vermont</option>
-									<option value="VA">Virginia</option>
+									<option value="VT">VT</option>
+									<option value="VA">VA</option>
 									<option value="WA">Washington</option>
-									<option value="WV">West Virginia</option>
+									<option value="WV">WV</option>
 									<option value="WI">Wisconsin</option>
 									<option value="WY">Wyoming</option>
 									<option>...</option> required
@@ -144,10 +170,11 @@ export class Form extends React.Component {
 							<div className="col-md-3 mb-3">
 								<label htmlFor="validationDefault05">Zip code/Postal code</label>
 								<input
-									type="text"
+									type="number"
 									className="form-control"
 									id="validationDefault05"
 									placeholder="Zip"
+									maxLength="5"
 									required
 								/>
 							</div>
@@ -163,25 +190,28 @@ export class Form extends React.Component {
 						</div>
 						<div className="form-group">
 							<form>
-								<div className="checkbox">
+								<div className="checkbox-inline">
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
 										Apartment
+										<input type="apt" className="form-control" id="apartment" />
 									</label>
 								</div>
-								<div className="checkbox">
+								<div className="checkbox-inline">
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
 										Suite
+										<input type="ste" className="form-control" id="suite" />
 									</label>
 								</div>
-								<div className="checkbox">
+								<div className="checkbox-inline">
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
 										Floor
+										<input type="floor" className="form-control" id="floor" />
 									</label>
 								</div>
 							</form>
@@ -258,6 +288,7 @@ export class Form extends React.Component {
 									className="form-control"
 									id="validationDefault05"
 									placeholder="Zip"
+									maxLength="5"
 									required
 								/>
 							</div>
@@ -321,7 +352,7 @@ export class Form extends React.Component {
 									type="date"
 									className="form-control"
 									id="validationDefault03"
-									placeholder="Passport Valid til"
+									placeholder="MM/DD/YYYY"
 									required
 								/>
 							</div>
@@ -365,7 +396,7 @@ export class Form extends React.Component {
 									type="text"
 									className="form-control"
 									id="validationDefault03"
-									placeholder="B1/2, F1/2, M1/2"
+									placeholder="B1/B2, F1/F2, M1/M2, J1/J2"
 									required
 								/>
 							</div>
@@ -393,7 +424,7 @@ export class Form extends React.Component {
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
-										Apartment
+										Apartment <input type="apt" className="form-control" id="apartment" />
 									</label>
 								</div>
 								<div className="checkbox-inline">
@@ -401,19 +432,17 @@ export class Form extends React.Component {
 										<input type="checkbox" value="" />
 										{"  "}
 										Suite
+										<input type="ste" className="form-control" id="suite" />
 									</label>
 								</div>
 								<div className="checkbox-inline">
 									<label>
 										<input type="checkbox" value="" />
 										{"  "}
-										Floor
+										Floor <input type="floor" className="form-control" id="floor" />
 									</label>
 								</div>
 							</div>{" "}
-							<div className="col-md-6 mb-3">
-								<input type="text" className="form-control" id="inputAddress2" />
-							</div>
 						</form>
 						<div className="form-row">
 							<div className="col-md mb-3">
@@ -435,7 +464,7 @@ export class Form extends React.Component {
 								<div className="col-md mb-3">
 									<label htmlFor="validationDefault05">Postal code</label>
 									<input
-										type="number"
+										type="text/number"
 										className="form-control"
 										id="validationDefault05"
 										placeholder="Postal code"
@@ -1116,6 +1145,731 @@ export class Form extends React.Component {
 										If you answered {'"YES"'} you must provide the dates you maintained a J-1/J-2
 										status.
 									</p>
+								</div>
+								<div className="row">
+									Part 5.
+									<legend className="col-form-label  pt-0"> 1.a.</legend>
+									<div className="col-md">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												I can read and understand English, and I have read and understand every
+												question and instruction on this application and my answer to every
+												question.
+											</label>
+										</div>{" "}
+										<legend className="col-form-label  pt-0"> 1.b.</legend>
+										<div className="col-md">
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="radio"
+													name="gridRadios"
+													id="gridRadios2"
+													value="option2"
+												/>
+												<label className="form-check-label" htmlFor="gridRadios2">
+													The interpreter read to me every question and instruction on this
+													application and my answer to every question in {"   "}
+													<input Language /> a language in which I am fluent, and I understand
+													everything.
+												</label>
+											</div>
+											<div className="form-row">
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault01">
+														Interpreter&#39;s Last Name
+													</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault01"
+														placeholder="Last name"
+														required
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault02">
+														Interpreter&#39;s First Name
+													</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault02"
+														placeholder="First name"
+														required
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault02">
+														Interpreter&#39;s Business/Organization Name
+													</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault02"
+														placeholder="Business name"
+														required
+													/>
+												</div>
+											</div>
+											<div className="form-row">
+												<div className="col-md-4 mb-3">
+													<label htmlFor="validationDefault01">
+														Interpreter&#39;s Daytime Phone Number
+													</label>
+													<input
+														type="tel"
+														className="form-control"
+														id="validationDefault01"
+														placeholder="123-456-7890"
+														maxLength="12"
+														required
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault02">
+														Interpreter&#39;s Mobile Phone Number
+													</label>
+													<input
+														type="tel"
+														className="form-control"
+														id="validationDefault02"
+														placeholder="123-456-7890"
+														maxLength="12"
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="inputEmail">Interpreter&#39;s Email Address</label>
+													<input
+														type="email"
+														className="form-control"
+														id="inputEmail"
+														placeholder="email"
+													/>
+												</div>
+											</div>
+
+											<div className="form-group">
+												<label htmlFor="inputAddress">Interpreter&#39;s Mailing Address</label>
+												<input
+													type="text"
+													className="form-control"
+													id="inputAddress"
+													placeholder="Number, Street name"
+												/>
+											</div>
+											<div className="form-group">
+												<form>
+													<div className="checkbox-inline">
+														<label>
+															<input type="checkbox" value="" />
+															{"  "}
+															Apartment{" "}
+															<input type="apt" className="form-control" id="apartment" />
+														</label>
+													</div>
+													<div className="checkbox-inline">
+														<label>
+															{" "}
+															<input type="checkbox" value="" />
+															{"  "}
+															Suite{" "}
+															<input type="ste" className="form-control" id="suite" />
+														</label>
+													</div>
+													<div className="checkbox-inline">
+														<label>
+															<input type="checkbox" value="" />
+															{"  "}
+															Floor{" "}
+															<input type="floor" className="form-control" id="floor" />
+														</label>
+													</div>
+												</form>
+											</div>
+											<div className="form-row">
+												<div className="col-md-6 mb-3">
+													<label htmlFor="validationDefault03">City/Town</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault03"
+														required
+													/>
+												</div>
+
+												<div className="col-md-3 mb-3">
+													<label htmlFor="inputState">State</label>
+													<select id="inputState" className="form-control required">
+														<option selected>Choose...</option>
+														<option value="AL">AL</option>
+														<option value="AK">Alaska</option>
+														<option value="AZ">Arizona</option>
+														<option value="AR">Arkansas</option>
+														<option value="CA">California</option>
+														<option value="CO">Colorado</option>
+														<option value="CT">Connecticut</option>
+														<option value="DE">Delaware</option>
+														<option value="DC">District Of Columbia</option>
+														<option value="FL">Florida</option>
+														<option value="GA">Georgia</option>
+														<option value="HI">HI</option>
+														<option value="ID">Idaho</option>
+														<option value="IL">Illinois</option>
+														<option value="IN">Indiana</option>
+														<option value="IA">IA</option>
+														<option value="KS">Kansas</option>
+														<option value="KY">Kentucky</option>
+														<option value="LA">Louisiana</option>
+														<option value="ME">Maine</option>
+														<option value="MD">Maryland</option>
+														<option value="MA">Massachusetts</option>
+														<option value="MI">Michigan</option>
+														<option value="MN">Minnesota</option>
+														<option value="MS">Mississippi</option>
+														<option value="MO">Missouri</option>
+														<option value="MT">Montana</option>
+														<option value="NE">Nebraska</option>
+														<option value="NV">Nevada</option>
+														<option value="NH">New Hampshire</option>
+														<option value="NJ">New Jersey</option>
+														<option value="NM">New Mexico</option>
+														<option value="NY">New York</option>
+														<option value="NC">NC</option>
+														<option value="ND">North Dakota</option>
+														<option value="OH">Ohio</option>
+														<option value="OK">Oklahoma</option>
+														<option value="OR">Oregon</option>
+														<option value="PA">Pennsylvania</option>
+														<option value="RI">Rhode Island</option>
+														<option value="SC">South Carolina</option>
+														<option value="SD">South Dakota</option>
+														<option value="TN">Tennessee</option>
+														<option value="TX">Vermontxas</option>
+														<option value="UT">Utah</option>
+														<option value="VT">VT</option>
+														<option value="VA">VA</option>
+														<option value="WA">Washington</option>
+														<option value="WV">WV</option>
+														<option value="WI">Wisconsin</option>
+														<option value="WY">Wyoming</option>
+														<option>...</option> required
+													</select>
+												</div>
+												<div className="col-md-3 mb-3">
+													<label htmlFor="validationDefault05">Zip code</label>
+													<input
+														type="number"
+														className="form-control"
+														id="validationDefault05"
+														placeholder="Zip"
+														maxLength="5"
+														required
+													/>
+												</div>
+											</div>
+										</div>
+										<legend className="col-form-label  pt-0"> 2.</legend>
+										<div className="col-md">
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="radio"
+													name="gridRadios"
+													id="gridRadios2"
+													value="option2"
+												/>
+												<label className="form-check-label" htmlFor="gridRadios2">
+													At my request, the preparer named {"   "}
+													<input Name /> prepared this application for me based only upon
+													information I provided or authorized.
+												</label>
+											</div>
+											<div className="form-row">
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault01">
+														Preparer&#39;s Last Name
+													</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault01"
+														placeholder="Last name"
+														required
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault02">
+														Preparer&#39;s First Name
+													</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault02"
+														placeholder="First name"
+														required
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault02">
+														Preparer&#39;s Business/Organization Name
+													</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault02"
+														placeholder="Business name"
+														required
+													/>
+												</div>
+											</div>
+											<div className="form-row">
+												<div className="col-md-4 mb-3">
+													<label htmlFor="validationDefault01">
+														Preparer&#39;s Daytime Phone Number
+													</label>
+													<input
+														type="tel"
+														className="form-control"
+														id="validationDefault01"
+														placeholder="123-456-7890"
+														maxLength="12"
+														required
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="validationDefault02">
+														Preparer&#39;s Mobile Phone Number
+													</label>
+													<input
+														type="tel"
+														className="form-control"
+														id="validationDefault02"
+														placeholder="123-456-7890"
+														maxLength="12"
+													/>
+												</div>
+												<div className="col-md mb-3">
+													<label htmlFor="inputEmail">Preparer&#39;s Email Address</label>
+													<input
+														type="email"
+														className="form-control"
+														id="inputEmail"
+														placeholder="email"
+													/>
+												</div>
+											</div>
+
+											<div className="form-group">
+												<label htmlFor="inputAddress">Preparer&#39;s Mailing Address</label>
+												<input
+													type="text"
+													className="form-control"
+													id="inputAddress"
+													placeholder="Number, Street name"
+												/>
+											</div>
+											<div className="form-group">
+												<form>
+													<div className="checkbox-inline">
+														<label>
+															<input type="checkbox" value="" />
+															{"  "}
+															Apartment{" "}
+															<input type="apt" className="form-control" id="apartment" />
+														</label>
+													</div>
+													<div className="checkbox-inline">
+														<label>
+															{" "}
+															<input type="checkbox" value="" />
+															{"  "}
+															Suite{" "}
+															<input type="ste" className="form-control" id="suite" />
+														</label>
+													</div>
+													<div className="checkbox-inline">
+														<label>
+															<input type="checkbox" value="" />
+															{"  "}
+															Floor{" "}
+															<input type="floor" className="form-control" id="floor" />
+														</label>
+													</div>
+												</form>
+											</div>
+											<div className="form-row">
+												<div className="col-md-6 mb-3">
+													<label htmlFor="validationDefault03">City/Town</label>
+													<input
+														type="text"
+														className="form-control"
+														id="validationDefault03"
+														required
+													/>
+												</div>
+
+												<div className="col-md-3 mb-3">
+													<label htmlFor="inputState">State</label>
+													<select id="inputState" className="form-control required">
+														<option selected>Choose...</option>
+														<option value="AL">AL</option>
+														<option value="AK">Alaska</option>
+														<option value="AZ">Arizona</option>
+														<option value="AR">Arkansas</option>
+														<option value="CA">California</option>
+														<option value="CO">Colorado</option>
+														<option value="CT">Connecticut</option>
+														<option value="DE">Delaware</option>
+														<option value="DC">District Of Columbia</option>
+														<option value="FL">Florida</option>
+														<option value="GA">Georgia</option>
+														<option value="HI">HI</option>
+														<option value="ID">Idaho</option>
+														<option value="IL">Illinois</option>
+														<option value="IN">Indiana</option>
+														<option value="IA">IA</option>
+														<option value="KS">Kansas</option>
+														<option value="KY">Kentucky</option>
+														<option value="LA">Louisiana</option>
+														<option value="ME">Maine</option>
+														<option value="MD">Maryland</option>
+														<option value="MA">Massachusetts</option>
+														<option value="MI">Michigan</option>
+														<option value="MN">Minnesota</option>
+														<option value="MS">Mississippi</option>
+														<option value="MO">Missouri</option>
+														<option value="MT">Montana</option>
+														<option value="NE">Nebraska</option>
+														<option value="NV">Nevada</option>
+														<option value="NH">New Hampshire</option>
+														<option value="NJ">New Jersey</option>
+														<option value="NM">New Mexico</option>
+														<option value="NY">New York</option>
+														<option value="NC">NC</option>
+														<option value="ND">North Dakota</option>
+														<option value="OH">Ohio</option>
+														<option value="OK">Oklahoma</option>
+														<option value="OR">Oregon</option>
+														<option value="PA">Pennsylvania</option>
+														<option value="RI">Rhode Island</option>
+														<option value="SC">South Carolina</option>
+														<option value="SD">South Dakota</option>
+														<option value="TN">Tennessee</option>
+														<option value="TX">Vermontxas</option>
+														<option value="UT">Utah</option>
+														<option value="VT">VT</option>
+														<option value="VA">VA</option>
+														<option value="WA">Washington</option>
+														<option value="WV">WV</option>
+														<option value="WI">Wisconsin</option>
+														<option value="WY">Wyoming</option>
+														<option>...</option> required
+													</select>
+												</div>
+												<div className="col-md-3 mb-3">
+													<label htmlFor="validationDefault05">Zip code</label>
+													<input
+														type="number"
+														className="form-control"
+														id="validationDefault05"
+														placeholder="Zip"
+														maxLength="5"
+														required
+													/>
+												</div>
+											</div>
+										</div>
+										<legend className="col-form-label  pt-0"> 2.</legend>
+										<div className="col-md">
+											<div className="form-check">
+												<input
+													className="form-check-input"
+													type="radio"
+													name="gridRadios"
+													id="gridRadios2"
+													value="option2"
+												/>
+												<label className="form-check-label" htmlFor="gridRadios2">
+													At my request, the preparer named {"   "}
+													<input Name /> prepared this application for me based only upon
+													information I provided or authorized.
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
+								</div>
+								<div className="row">
+									<legend className="col-form-label  pt-0">
+										Are you, or any other person included on the application, an applicant for an
+										immigration visa?
+									</legend>
+									<div className="col-md-10">
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios1"
+												value="option1"
+												checked
+											/>
+											<label className="form-check-label" htmlFor="gridRadios1">
+												Yes
+											</label>
+										</div>
+										<div className="form-check">
+											<input
+												className="form-check-input"
+												type="radio"
+												name="gridRadios"
+												id="gridRadios2"
+												value="option2"
+											/>
+											<label className="form-check-label" htmlFor="gridRadios2">
+												No
+											</label>
+										</div>
+									</div>
 								</div>
 								<div className="row">
 									<legend className="col-form-label  pt-0">
