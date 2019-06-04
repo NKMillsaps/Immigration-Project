@@ -7,6 +7,13 @@ export class Navbar extends React.Component {
 			<nav className="navbar sticky-top navbar-light bg-light mb-3">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">DIY Immigration</span>
+
+					<img
+						src="C:\Users\Natalie\Documents\Desktop\Imm_zoom_logo.jpg/"
+						alt="Stickman"
+						width="24"
+						height="39"
+					/>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/modalf1">
