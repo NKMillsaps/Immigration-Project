@@ -605,7 +605,21 @@ export class Form extends React.Component {
 
 						<div className="form-row">
 							The total number of people (including me) in this application is: <input Number /> (Complete
-							the supplement for each co-applicant.)
+							the supplement for each co-applicant.)&nbsp;
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">
+									1. I/We request that my/our current or requested status (Visa) be extended until
+								</label>
+								<input
+									type="date"
+									className="form-control-sm"
+									id="validationDefault03"
+									placeholder="MM/DD/YYYY"
+									required
+								/>
+							</div>
 						</div>
 						<div className="form-row">
 							<legend className="col-form-label  pt-0">
@@ -641,13 +655,72 @@ export class Form extends React.Component {
 							</div>
 						</div>
 						<div className="form-row">
-							<h2>Part 3</h2>
+							2.b. If you answered {"YES"} provide USCIS Receipt Number &#32;
+							<input type="number" className="form-control col-md-3" placeholder="#" />
 						</div>
 						<div className="form-row">
+							<legend className="col-form-label  pt-0">
+								3.a. Is this application based on a separate petition or application to provide your
+								spouse, child, or parent an extension or change of status?
+							</legend>
+							<div className="col-md">
+								<div className="form-check">
+									<input
+										className="form-check-input"
+										type="radio"
+										name="gridRadios"
+										id="gridRadios1"
+										value="option1"
+										checked
+									/>
+									<label className="form-check-label" htmlFor="gridRadios1">
+										Yes, filed with this Form I-539
+									</label>
+								</div>
+								<div className="form-check">
+									<input
+										className="form-check-input"
+										type="radio"
+										name="gridRadios"
+										id="gridRadios2"
+										value="option2"
+									/>
+									<label className="form-check-label" htmlFor="gridRadios2">
+										Yes, filed preiously and pending with USCIS
+									</label>
+								</div>
+								<div className="form-check">
+									<input
+										className="form-check-input"
+										type="radio"
+										name="gridRadios"
+										id="gridRadios2"
+										value="option2"
+									/>
+									<label className="form-check-label" htmlFor="gridRadios2">
+										No
+									</label>
+								</div>
+							</div>
+						</div>
+						<div className="form-row">
+							3.b. If you answered {"YES"} provide
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault01">USCIS Receipt Number</label>
+								<input type="number" className="form-control" id="validationDefault01" required />
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">First and Last Name of Petitioner/Applicant</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Name"
+									required
+								/>
+							</div>
 							<div className="col-md mb-3">
-								<label htmlFor="validationDefault03">
-									1. I/We request that my/our current or requested status (Visa) be extended until
-								</label>
+								<label htmlFor="validationDefault03">Date Filed</label>
 								<input
 									type="date"
 									className="form-control"
@@ -656,6 +729,18 @@ export class Form extends React.Component {
 									required
 								/>
 							</div>
+						</div>
+						<div className="form-row">3.b. If you answered {"YES"} provide</div>
+						<div className="form-row">
+							USCIS Receipt Number
+							<input type="number" className="form-control col-md-3" placeholder="#" />
+						</div>
+						<div className="form-row">
+							If the petition or application is pending with USCIS, also provide the following information
+						</div>
+
+						<div className="form-row">
+							<h2>Part 3</h2>
 						</div>
 
 						<div className="form-row">another row</div>
