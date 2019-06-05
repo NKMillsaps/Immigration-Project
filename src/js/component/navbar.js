@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/logozoom.png";
+import logo from "../../img/logozoom2.png";
 
 export class Navbar extends React.Component {
 	render() {
@@ -9,7 +9,6 @@ export class Navbar extends React.Component {
 				<Link to="/">
 					<img src={logo} />
 				</Link>
-				<h2> Immigration ZOOM </h2>
 
 				<div className="ml-auto">
 					<Link to="/modalf1">
@@ -18,7 +17,7 @@ export class Navbar extends React.Component {
 					<Link to="/form">
 						<button className="btn btn-primary">Form</button>
 					</Link>
-					<Link to="/demo">
+					<Link to="/creditCard">
 						<button className="btn btn-primary m-3">Login/Register</button>
 					</Link>
 				</div>

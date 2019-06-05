@@ -3,6 +3,8 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 import { Options } from "../views/options.js";
+import { I130apetition } from "../views/i130petition.js";
+import { CreditCard } from "../views/creditCard.js";
 
 export class Home extends React.Component {
 	render() {
@@ -20,7 +22,9 @@ export class Home extends React.Component {
 											Studen Visa. The eligibility requirements may vary depending on the
 											immigrant category you are applying under. Go to our Green Card Eligibility
 											Categories page to see all the possible categories you can apply under and
-											what the eligibility requirements are.
+											what the eligibility requirements are. Here you can find all information you
+											need to file with USCIS in order to start your process of getting your GREEN
+											CARD.
 										</em>
 									</small>
 								</p>

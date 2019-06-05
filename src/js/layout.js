@@ -7,11 +7,13 @@ import { Home } from "./views/home";
 import { Form } from "./views/form";
 import { FormCopy } from "./views/form_copy";
 import { Doctors } from "./views/doctors";
-import { Demo } from "./views/demo";
+import { Register } from "./views/register";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Options } from "./views/options";
 import { Modalf1 } from "./views/modalf1";
+import { I130apetition } from "./views/i130apetition";
+import { CreditCard } from "./views/creditCard";
 
 // components
 import { Navbar } from "./component/navbar";
@@ -38,11 +40,12 @@ export class Layout extends React.Component {
 								<Switch>
 									<Route exact path="/" component={Home} />
 									<Route exact path="/form" component={Form} />
+									<Route exact path="/i130apetition" component={I130apetition} />
 									<Route exact path="/formcopy" component={FormCopy} />
 									<Route exact path="/doctors" component={Doctors} />
-									<Route path="/demo" component={Demo} />
+									<Route path="/register" component={Register} />
 									<Route path="/options" component={Options} />
-									<Route path="/modalf1" component={Modalf1} />
+									<Route path="/creditcard" component={CreditCard} />
 									<Route path="/single/:theid" component={Single} />
 									<Route render={() => <h1>Not found!</h1>} />
 								</Switch>
