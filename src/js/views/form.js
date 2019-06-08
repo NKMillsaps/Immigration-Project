@@ -43,6 +43,41 @@ export class Form extends React.Component {
 							</div>
 						</div>
 						<div className="form-row">
+							<p>Please provide other names you ever used (if any)</p>
+						</div>
+						<div className="form-row">
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault01">Last Name (Family name)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault01"
+									placeholder="Last name"
+									required
+								/>
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">First Name</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="First name"
+									required
+								/>
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Middle name"
+									required
+								/>
+							</div>
+						</div>
+						<div className="form-row">
 							<div className="col-md-4 mb-3">
 								<label htmlFor="validationDefault01">Daytime Phone Number</label>
 								<input
