@@ -870,7 +870,7 @@ export class Form extends React.Component {
 							</div>
 						</div>
 						<div className="form-row">
-							<div className="col-md mb-3">
+							<div className="col-md-4 mb-3">
 								<label htmlFor="validationDefault01">
 									3.b. If you answered {"YES"} provide USCIS Receipt Number
 								</label>
@@ -886,7 +886,7 @@ export class Form extends React.Component {
 									required
 								/>
 							</div>
-							<div className="col-md mb-3">
+							<div className="col-sm-2 mb-3">
 								<label htmlFor="validationDefault03">Date Filed</label>
 								<input
 									type="date"
@@ -914,7 +914,7 @@ export class Form extends React.Component {
 						</div>
 						<div className="form-row">Employer 1 (current/most recent).</div>
 						<div className="form-row">
-							<div className="col-md-4 mb-3">
+							<div className="col-md-6 mb-3">
 								<label htmlFor="validationDefault02">Name of Employer/Company/Organization</label>
 								<input
 									type="text"
@@ -923,50 +923,9 @@ export class Form extends React.Component {
 									placeholder="Employer"
 								/>
 							</div>
-						</div>
 
-						<div className="form-row">
-							<div className="col-md-4 mb-3">
-								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
-								<input
-									type="text"
-									className="form-control"
-									id="validationDefault02"
-									placeholder="Middle name"
-									required
-								/>
-							</div>
-						</div>
-						<div className="form-row">
-							<div className="col-md-4 mb-3">
-								<label htmlFor="validationDefault01">Daytime Phone Number</label>
-								<input
-									type="tel"
-									className="form-control"
-									id="validationDefault01"
-									placeholder="123-456-7890"
-									maxLength="12"
-									required
-								/>
-							</div>
-							<div className="col-md mb-3">
-								<label htmlFor="validationDefault02">Mobile Phone Number</label>
-								<input
-									type="tel"
-									className="form-control"
-									id="validationDefault02"
-									placeholder="123-456-7890"
-									maxLength="12"
-								/>
-							</div>
-							<div className="col-md mb-3">
-								<label htmlFor="inputEmail">Email Address (if any)</label>
-								<input type="email" className="form-control" id="inputEmail" placeholder="email" />
-							</div>
-						</div>
-						<div className="form-row">
 							<div className="col-md-6 mb-3">
-								<label htmlFor="inputAddress">U.S. Mailing Address</label>
+								<label htmlFor="inputAddress">Employer Mailing Address</label>
 								<input
 									type="text"
 									className="form-control"
@@ -974,7 +933,8 @@ export class Form extends React.Component {
 									placeholder="Number, Street name"
 								/>
 							</div>
-
+						</div>
+						<div className="form-row">
 							<div className="form-inline col-md">
 								<div className="form-check form-check-inline">
 									<input
@@ -985,7 +945,7 @@ export class Form extends React.Component {
 										value="option1"
 									/>
 									<label className="form-check-label" htmlFor="inlinecheckbox1">
-										Apartment
+										Apt.
 									</label>
 								</div>
 								<div className="form-check form-check-inline">
@@ -1014,14 +974,14 @@ export class Form extends React.Component {
 								</div>
 								<input type="text" className="form-control col-sm" placeholder="#" />
 							</div>
-						</div>
-						<div className="form-row">
-							<div className="col-md-6 mb-3">
+
+							<div className="col-md-4 mb-3">
 								<label htmlFor="validationDefault03">City/Town</label>
 								<input type="text" className="form-control" id="validationDefault03" required />
 							</div>
-
-							<div className="col-md-3 mb-3">
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
 								<label htmlFor="inputState">State</label>
 								<select id="inputState" className="form-control required">
 									<option selected>Choose...</option>
@@ -1079,8 +1039,12 @@ export class Form extends React.Component {
 									<option>...</option> required
 								</select>
 							</div>
-							<div className="col-md-3 mb-3">
-								<label htmlFor="validationDefault05">Zip code</label>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault03">Province/Teritory/Region/Area</label>
+								<input type="text" className="form-control" id="validationDefault03" required />
+							</div>
+							<div className="col-md-2 mb-3">
+								<label htmlFor="validationDefault05">Zip code/Postal code</label>
 								<input
 									type="number"
 									className="form-control"
@@ -1090,20 +1054,257 @@ export class Form extends React.Component {
 									required
 								/>
 							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Country</label>
+								<input type="text" className="form-control" id="validationDefault03" required />
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault02">Your Ocupation/Position</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Name"
+									required
+								/>
+							</div>
+							<div className="col-sm-2 mb-3">
+								<label htmlFor="validationDefault03">Embpolyed from (date)</label>
+								<input
+									type="date"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="MM/DD/YYYY"
+									required
+								/>
+							</div>
+							<div className="col-sm-2 mb-3">
+								<label htmlFor="validationDefault03">Employed untill (date)</label>
+								<input
+									type="date"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="MM/DD/YYYY"
+									required
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<h2>Part 5</h2>
+						</div>
+						<div className="form-row">Information about your parents</div>
+
+						<div className="form-row">
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault01">PARENT I. Last Name (Family name)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault01"
+									placeholder="Last name"
+									required
+								/>
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">First Name</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="First name"
+									required
+								/>
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Middle name"
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault01">
+									PARENT I Other names (if any) Last Name (Family name)
+								</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault01"
+									placeholder="Last name"
+									required
+								/>
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">First Name</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="First name"
+									required
+								/>
+							</div>
+							<div className="col-md-4 mb-3">
+								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Middle name"
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault01">PARENT II. Last Name (Family name)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault01"
+									placeholder="Last name"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault02">First Name</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="First name"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Middle name"
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md-5 mb-3">
+								<label htmlFor="validationDefault01">
+									PARENT II. Other names (if any) Last Name (Family name)
+								</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault01"
+									placeholder="Last name"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault02">First Name</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="First name"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault02"
+									placeholder="Middle name"
+								/>
+							</div>
+						</div>
+
+						<div className="form-row">
+							<div className="form-check form-check-inline">
+								<h>Sex &nbsp;</h>
+								<input
+									className="form-check-input"
+									type="checkbox"
+									name="inlinecheckboxOptions"
+									id="inlinecheckbox1"
+									value="option1"
+								/>
+								<label className="form-check-label" htmlFor="inlinecheckbox1">
+									Male
+								</label>
+							</div>
+
+							<div className="form-check form-check-inline">
+								<input
+									className="form-check-input"
+									type="checkbox"
+									name="inlinecheckboxOptions"
+									id="inlinecheckbox3"
+									value="option3"
+								/>
+								<label className="form-check-label col-md" htmlFor="inlinecheckbox3">
+									Femail
+								</label>
+							</div>
+
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">City/Town of Birth</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="City/Town"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Country of Birth</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Country of birth"
+									required
+								/>
+							</div>
+						</div>
+						<div className="form-row">
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Current City/Town of Residence (if living)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Nationality/Citizenship"
+									required
+								/>
+							</div>
+							<div className="col-md mb-3">
+								<label htmlFor="validationDefault03">Current Country of Residence (if living)</label>
+								<input
+									type="text"
+									className="form-control"
+									id="validationDefault03"
+									placeholder="Nationality/Citizenship"
+									required
+								/>
+							</div>
+						</div>
+
+						<div className="form-row">
+							<h2>Part 3</h2>
 						</div>
 
 						<div className="form-row">another row</div>
-
+						<div className="form-row">another row</div>
 						<div className="form-row">
-							<div className="form-row">
-								<h2>Part 3</h2>
-							</div>
-
-							<div className="form-row">another row</div>
-							<div className="form-row">another row</div>
-							<div className="form-row">
-								<h2>Part X</h2>
-							</div>
+							<h2>Part X</h2>
 						</div>
 					</form>
 				</div>
