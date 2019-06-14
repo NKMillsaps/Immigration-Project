@@ -17,7 +17,7 @@ export class Navbar extends React.Component {
 					<Link to="/form">
 						<button className="btn btn-primary">Form</button>
 					</Link>
-					<Link to="/creditCard">
+					<Link to="/loginRegister">
 						<button className="btn btn-primary m-3">Login/Register</button>
 					</Link>
 				</div>
