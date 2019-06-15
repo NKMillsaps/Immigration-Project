@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 // import "../../styles/demo.scss";
 
-export class Register extends React.Component {
+export class LoginRegister extends React.Component {
 	render() {
 		return (
 			<div className="container">

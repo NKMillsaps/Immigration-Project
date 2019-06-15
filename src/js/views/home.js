@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Options } from "../views/options.js";
 import { I130apetition } from "../views/i130petition.js";
 import { CreditCard } from "../views/creditCard.js";
+import { Green_card_list } from "../views/green_card_list.js";
 
 export class Home extends React.Component {
 	render() {
@@ -14,7 +15,7 @@ export class Home extends React.Component {
 					<div className="jumbotron jumbotron-fluid border border-light">
 						<div className="container shadow-lg p-3 mb-5 rounded">
 							<div className="container">
-								<h1 className="font-weight-bold text-center">DIY Application</h1>
+								<h1 className="font-weight-bold text-center">Application ZOOM</h1>
 								<p className="lead">
 									<small>
 										<em>

@@ -8,12 +8,13 @@ import { Form } from "./views/form";
 import { FormCopy } from "./views/form_copy";
 import { Doctors } from "./views/doctors";
 import { Register } from "./views/register";
+import { LoginRegister } from "./views/loginRegister";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Options } from "./views/options";
-import { Modalf1 } from "./views/modalf1";
 import { I130apetition } from "./views/i130apetition";
 import { CreditCard } from "./views/creditCard";
+import { Green_card_list } from "./views/green_card_list";
 
 // components
 import { Navbar } from "./component/navbar";
@@ -44,9 +45,12 @@ export class Layout extends React.Component {
 									<Route exact path="/formcopy" component={FormCopy} />
 									<Route exact path="/doctors" component={Doctors} />
 									<Route path="/register" component={Register} />
+									<Route path="/loginregister" component={LoginRegister} />
 									<Route path="/options" component={Options} />
 									<Route path="/creditcard" component={CreditCard} />
 									<Route path="/single/:theid" component={Single} />
+									<Route path="/green_card_list" component={Green_card_list} />
+
 									<Route render={() => <h1>Not found!</h1>} />
 								</Switch>
 							</div>
