@@ -7,7 +7,7 @@ export class NavbarSideLeft extends React.Component {
 			<nav className="navbar sticky-left navbar-light bg-light mb-3">
 				<div className="d-none d-xl-block col-xl-2 bd-toc text-left">
 					<ul className="section-nav">
-						<li className="toc-entry toc-h2">
+						<li className="toc-entry toc-h2 ">
 							<a href="#how-it-works">
 								<b>Contacts</b>
 							</a>

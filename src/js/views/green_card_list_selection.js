@@ -26,7 +26,7 @@ export class Green_card_list_selection extends React.Component {
 
 							<p className="text-right">
 								<Link to="/green_card_list">
-									<button className="btn btn-primary">Continue</button>
+									<button className="btn btn-danger">Continue</button>
 								</Link>
 							</p>
 						</div>

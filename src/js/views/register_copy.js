@@ -2,26 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
-import { Register } from "../views/register.js";
 
 // import "../../styles/demo.scss";
 
-export class LoginRegister extends React.Component {
+export class Register extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="text-center mt-5">
-					<div className="card-deck">
-						<div className="card">
-							<div className="card-body">
-								<h6 className="card-title">
-									<u>If you are existing customer please LOG IN</u>
-								</h6>
-								<p className="card-text">
-									<ul className="list-group">
+				<ul className="list-group">
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return store.demo.map((item, index) => {
+								return (
+									<form key={index}>
 										<div className="form-group row">
-											<label htmlFor="inputEmail3" className="col-sm-3 col-form-label">
-												Email
+											<label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
+												{item.title}
 											</label>
 											<div className="col-sm-10">
 												<input
@@ -33,7 +29,7 @@ export class LoginRegister extends React.Component {
 											</div>
 										</div>
 										<div className="form-group row">
-											<label htmlFor="inputPassword3" className="col-sm-3 col-form-label">
+											<label htmlFor="inputPassword3" className="col-sm-2 col-form-label">
 												Password
 											</label>
 											<div className="col-sm-10">
@@ -45,34 +41,20 @@ export class LoginRegister extends React.Component {
 												/>
 											</div>
 										</div>
+
 										<div className="form-group row">
-											<div className="col-sm-10 ">
+											<div className="col-sm-10">
 												<button type="submit" className="btn btn-primary">
-													Log in
+													Sign in
 												</button>
 											</div>
 										</div>
-									</ul>
-								</p>
-							</div>
-						</div>
-
-						<div className="card">
-							<div className="card-body">
-								<h6 className="card-title">
-									<u>If you are new customer please REGISTER</u>
-								</h6>
-								<p className="card-text">
-									<Register />
-								</p>
-							</div>
-						</div>
-					</div>
-					<a href="#" className="btn btn-success float-right">
-						Continue
-					</a>
-				</div>
-
+									</form>
+								);
+							});
+						}}
+					</Context.Consumer>
+				</ul>
 				<br />
 				<Link to="/">
 					<button className="btn btn-primary">Back home</button>

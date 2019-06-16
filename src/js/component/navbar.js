@@ -12,11 +12,13 @@ export class Navbar extends React.Component {
 
 				<div className="ml-auto">
 					<Link to="/modalf1">
-						<button className="btn btn-primary">Languages</button>
+						<select className="custom-select">
+							<option selected>Languages</option>
+							<option value={1}>Spanish</option>
+							<option value={2}>Russian</option>
+						</select>
 					</Link>
-					<Link to="/form">
-						<button className="btn btn-primary">Form</button>
-					</Link>
+
 					<Link to="/loginRegister">
 						<button className="btn btn-primary m-3">Login/Register</button>
 					</Link>
