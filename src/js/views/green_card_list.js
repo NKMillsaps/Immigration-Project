@@ -70,7 +70,7 @@ export class Green_card_list extends React.Component {
 							</ol>
 
 							<p className="text-right">
-								<Link to="/i130apetition">
+								<Link to="/form">
 									<button className="btn btn-primary">Continue</button>
 								</Link>
 							</p>

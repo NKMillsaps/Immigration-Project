@@ -18,7 +18,7 @@ export class Options extends React.Component {
 								person in the United States to apply for lawful permanent resident status.
 							</p>
 							<p className="text-center">
-								<Link to="/green_card_list">
+								<Link to="/green_card_list_selection">
 									<button className="btn btn-primary">Apply for a {"green card"}</button>
 								</Link>
 							</p>

@@ -6,6 +6,7 @@ import { Options } from "../views/options.js";
 import { I130apetition } from "../views/i130petition.js";
 import { CreditCard } from "../views/creditCard.js";
 import { Green_card_list } from "../views/green_card_list.js";
+import { Green_card_list_selection } from "../views/green_card_list_selection.js";
 
 export class Home extends React.Component {
 	render() {

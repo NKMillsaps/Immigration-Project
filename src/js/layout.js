@@ -15,6 +15,7 @@ import { Options } from "./views/options";
 import { I130apetition } from "./views/i130apetition";
 import { CreditCard } from "./views/creditCard";
 import { Green_card_list } from "./views/green_card_list";
+import { Green_card_list_selection } from "./views/green_card_list_selection";
 
 // components
 import { Navbar } from "./component/navbar";
@@ -50,6 +51,7 @@ export class Layout extends React.Component {
 									<Route path="/creditcard" component={CreditCard} />
 									<Route path="/single/:theid" component={Single} />
 									<Route path="/green_card_list" component={Green_card_list} />
+									<Route path="/green_card_list_selection" component={Green_card_list_selection} />
 
 									<Route render={() => <h1>Not found!</h1>} />
 								</Switch>
