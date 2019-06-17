@@ -6,8 +6,9 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Form } from "./views/form";
 import { FormCopy } from "./views/form_copy";
-import { Doctors } from "./views/doctors";
+
 import { Register } from "./views/register";
+import { Register_2 } from "./views/register_2";
 import { LoginRegister } from "./views/loginRegister";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -21,6 +22,7 @@ import { Green_card_list_selection } from "./views/green_card_list_selection";
 import { Navbar } from "./component/navbar";
 import { NavbarSideLeft } from "./component/navbarSideLeft";
 import { Footer } from "./component/footer";
+import { Doctors } from "./component/doctors";
 
 //create your first component
 export class Layout extends React.Component {
@@ -46,6 +48,7 @@ export class Layout extends React.Component {
 									<Route exact path="/formcopy" component={FormCopy} />
 									<Route exact path="/doctors" component={Doctors} />
 									<Route path="/register" component={Register} />
+									<Route path="/register_2" component={Register_2} />
 									<Route path="/loginregister" component={LoginRegister} />
 									<Route path="/options" component={Options} />
 									<Route path="/creditcard" component={CreditCard} />

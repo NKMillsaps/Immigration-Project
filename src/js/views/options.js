@@ -45,7 +45,7 @@ export class Options extends React.Component {
 						</div>
 					</div>
 				</div>
-				<a href="#" className="btn btn-success float-right">
+				<a href="#" className="btn btn-dangerfloat-right">
 					Continue
 				</a>
 			</div>

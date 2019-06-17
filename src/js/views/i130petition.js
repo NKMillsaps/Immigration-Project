@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/home.scss";
 
-export class I130apetition extends React.Component {
+export class I130petition extends React.Component {
 	render() {
 		return (
 			<div className="container">
