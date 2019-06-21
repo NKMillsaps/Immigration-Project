@@ -22,6 +22,7 @@ export class Register_2 extends React.Component {
 													<input
 														type="email"
 														className="form-control"
+														name="email"
 														id="inputEmail"
 														placeholder="email"
 														required
@@ -33,6 +34,7 @@ export class Register_2 extends React.Component {
 
 													<input
 														type="password"
+														name="password"
 														className="form-control"
 														id="inputPassword3"
 														placeholder="Password"
@@ -44,6 +46,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="inputEmail">Email Address (again)</label>
 													<input
 														type="email"
+														name="email"
 														className="form-control"
 														id="inputEmail"
 														placeholder="email"
@@ -56,6 +59,7 @@ export class Register_2 extends React.Component {
 
 													<input
 														type="password"
+														name="password"
 														className="form-control"
 														id="inputPassword3"
 														placeholder="Password"
@@ -69,6 +73,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault01">Last Name (Family name)</label>
 													<input
 														type="text"
+														name="lastname"
 														className="form-control"
 														id="validationDefault01"
 														placeholder="Last name"
@@ -80,6 +85,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault02">First Name</label>
 													<input
 														type="text"
+														name="firstname"
 														className="form-control"
 														id="validationDefault02"
 														placeholder="First name"
@@ -94,6 +100,7 @@ export class Register_2 extends React.Component {
 													</label>
 													<input
 														type="text"
+														name="middlename"
 														className="form-control"
 														id="validationDefault02"
 														placeholder="Middle name"
@@ -107,6 +114,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="inputAddress">U.S. Mailing Address</label>
 													<input
 														type="text"
+														name="US_Address"
 														className="form-control"
 														id="inputAddress"
 														placeholder="Number, Street name"
@@ -118,7 +126,7 @@ export class Register_2 extends React.Component {
 														<input
 															className="form-check-input"
 															type="checkbox"
-															name="inlinecheckboxOptions"
+															name="apartment"
 															id="inlinecheckbox1"
 															value="option1"
 														/>
@@ -130,7 +138,7 @@ export class Register_2 extends React.Component {
 														<input
 															className="form-check-input"
 															type="checkbox"
-															name="inlinecheckboxOptions"
+															name="apartment"
 															id="inlinecheckbox2"
 															value="option2"
 														/>
@@ -144,7 +152,7 @@ export class Register_2 extends React.Component {
 														<input
 															className="form-check-input"
 															type="checkbox"
-															name="inlinecheckboxOptions"
+															name="apartment"
 															id="inlinecheckbox3"
 															value="option3"
 														/>
@@ -166,6 +174,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault03">City/Town</label>
 													<input
 														type="text"
+														name="city"
 														className="form-control"
 														id="validationDefault03"
 														required
@@ -174,8 +183,11 @@ export class Register_2 extends React.Component {
 
 												<div className="col-md-3 mb-3">
 													<label htmlFor="inputState">State</label>
-													<select id="inputState" className="form-control required">
-														<option selected>Choose...</option>
+													<select
+														id="inputState"
+														className="form-control required"
+														name="state">
+														<option defaultValue="">Choose...</option>
 														<option value="AL">AL</option>
 														<option value="AK">AK</option>
 														<option value="AZ">AZ</option>
@@ -234,6 +246,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault05">Zip code</label>
 													<input
 														type="number"
+														name="zip"
 														className="form-control"
 														id="validationDefault05"
 														placeholder="Zip"
@@ -245,11 +258,11 @@ export class Register_2 extends React.Component {
 											<div className="form-row">
 												<div className="form-inline col-sm">
 													<div className="form-check form-check-inline">
-														<h>Sex &nbsp;</h>
+														<h1>Sex &nbsp;</h1>
 														<input
 															className="form-check-input"
 															type="checkbox"
-															name="inlinecheckboxOptions"
+															name="sex"
 															id="inlinecheckbox1"
 															value="option1"
 														/>
@@ -262,7 +275,7 @@ export class Register_2 extends React.Component {
 														<input
 															className="form-check-input"
 															type="checkbox"
-															name="inlinecheckboxOptions"
+															name="sex"
 															id="inlinecheckbox3"
 															value="option3"
 														/>
@@ -277,6 +290,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault03">Date of Birth</label>
 													<input
 														type="date"
+														name="dateOfBirth"
 														className="form-control"
 														id="validationDefault03"
 														placeholder="MM/DD/YYYY"
@@ -287,6 +301,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault03">Country of Birth</label>
 													<input
 														type="text"
+														name="countryOfBirth"
 														className="form-control"
 														id="validationDefault03"
 														placeholder="Country of birth"
@@ -299,6 +314,7 @@ export class Register_2 extends React.Component {
 													</label>
 													<input
 														type="text"
+														name="citizenship"
 														className="form-control"
 														id="validationDefault03"
 														placeholder="Nationality/Citizenship"
@@ -311,6 +327,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault01">Daytime Phone Number</label>
 													<input
 														type="tel"
+														name="dayPhone"
 														className="form-control"
 														id="validationDefault01"
 														placeholder="123-456-7890"
@@ -322,6 +339,7 @@ export class Register_2 extends React.Component {
 													<label htmlFor="validationDefault02">Mobile Phone Number</label>
 													<input
 														type="tel"
+														name="mobile"
 														className="form-control"
 														id="validationDefault02"
 														placeholder="123-456-7890"
@@ -332,11 +350,15 @@ export class Register_2 extends React.Component {
 										</div>
 										<div className="form-group row">
 											<div className="col-sm-10">
-												<button type="submit" className="btn btn-primary">
+												<button
+													type="submit"
+													className="btn btn-primary"
+													onClick={() => actions.addPerson()}>
 													Create user
 												</button>
 											</div>
 										</div>
+										<div />
 									</form>
 								);
 							});
@@ -347,3 +369,16 @@ export class Register_2 extends React.Component {
 		);
 	}
 }
+// document.querySelector("[name=email]").value,
+
+// 															document.querySelector("[name=lastname]").value,
+// 															document.querySelector("[name=firstname]").value,
+// 															document.querySelector("[name=lastname]").value,
+// 															document.querySelector("[name=US_Address]").value,
+// 															document.querySelector("[name=city]").value,
+
+// 															document.querySelector("[name=zip]").value,
+
+// 															document.querySelector("[name=countryOfBirth]").value,
+// 															document.querySelector("[name=citizenship]").value,
+// 															document.querySelector("[name=mobile]").value

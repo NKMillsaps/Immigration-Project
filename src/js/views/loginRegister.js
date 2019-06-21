@@ -49,6 +49,34 @@ export class LoginRegister extends React.Component {
 											<button type="submit" className="btn btn-primary">
 												Log in
 											</button>
+											<Context.Consumer>
+												{({ store, actions }) => {
+													return (
+														<div>
+															<div className="input-group mb-3">
+																<input
+																	name="LoginRegister"
+																	type="text"
+																	className="form-control"
+																	placeholder="Recipient's username"
+																	aria-label="Recipient's username"
+																	aria-describedby="button-addon2"
+																/>
+															</div>
+															<button
+																onClick={() =>
+																	actions.addPerson(
+																		document.querySelector("[name=person]").value
+																	)
+																}
+																className="btn btn-secondary">
+																{" "}
+																Add task
+															</button>
+														</div>
+													);
+												}}
+											</Context.Consumer>
 										</div>
 									</div>
 								</ul>

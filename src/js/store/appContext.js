@@ -34,21 +34,21 @@ const injectContext = PassedComponent => {
 					store.person = data;
 					this.setState({ store });
 				});
-                	fetch("https://3000-b5387517-91d1-4d21-b7bc-e35fc1a98079.ws-us0.gitpod.io/spouse")
+			fetch("https://3000-b5387517-91d1-4d21-b7bc-e35fc1a98079.ws-us0.gitpod.io/spouse")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
 					store.spouse = data;
 					this.setState({ store });
 				});
-                	fetch("https://3000-b5387517-91d1-4d21-b7bc-e35fc1a98079.ws-us0.gitpod.io/application")
+			fetch("https://3000-b5387517-91d1-4d21-b7bc-e35fc1a98079.ws-us0.gitpod.io/application")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
 					store.application = data;
 					this.setState({ store });
 				});
-                	fetch("https://3000-b5387517-91d1-4d21-b7bc-e35fc1a98079.ws-us0.gitpod.io/forms")
+			fetch("https://3000-b5387517-91d1-4d21-b7bc-e35fc1a98079.ws-us0.gitpod.io/forms")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
