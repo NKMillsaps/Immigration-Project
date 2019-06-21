@@ -1,4 +1,4 @@
-const { getState } = ({ getStore, setStore }) => {
+const getState  = ({ getStore, setStore }) => {
     return
     {
         store:
@@ -94,6 +94,7 @@ const { getState } = ({ getStore, setStore }) => {
                     });
 
 }};
-                    }
+                    };
+                };
 
-// export default getState;
+export default getState;
