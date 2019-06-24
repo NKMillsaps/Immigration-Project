@@ -69,17 +69,14 @@ export class Green_card_list extends React.Component {
 								</ul>
 							</ol>
 
-							<p className="text-right">
+							<div className="card-footer text-right">
 								<Link to="/form">
 									<button className="btn btn-primary">Continue</button>
 								</Link>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<a href="#" className="btn btn-success float-right">
-					Continue
-				</a>
 			</div>
 		);
 	}

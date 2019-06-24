@@ -28,10 +28,10 @@ export class Options extends React.Component {
 					</div>
 
 					<div className="card">
+						<div className="card-header">
+							<h4>Application To Extend/Change Nonimmigrant Status (I-539)</h4>
+						</div>
 						<div className="card-body">
-							<h2 className="card-title">
-								<u>Application To Extend/Change Nonimmigrant Status (I-539)</u>
-							</h2>
 							<p className="card-text">
 								You should use this application if you are one of the nonimmigrants listed below and
 								wish to apply to U.S. Citizenship and Immigration Services (USCIS) for an extension of
@@ -47,10 +47,6 @@ export class Options extends React.Component {
 						</div>
 					</div>
 				</div>
-				<a href="#" className="btn btn-dangerfloat-right">
-					{" "}
-					Continue{" "}
-				</a>
 			</div>
 		);
 	}
