@@ -18,67 +18,60 @@ export class LoginRegister extends React.Component {
 							</h6>
 							<p className="card-text">
 								<ul className="list-group">
-									<div className="form-group row">
-										<label htmlFor="inputEmail3" className="col-sm-3 col-form-label">
-											Email
-										</label>
-										<div className="col-sm-10">
-											<input
-												type="email"
-												className="form-control"
-												id="inputEmail3"
-												placeholder="Email"
-											/>
-										</div>
-									</div>
-									<div className="form-group row">
-										<label htmlFor="inputPassword3" className="col-sm-3 col-form-label">
-											Password
-										</label>
-										<div className="col-sm-10">
-											<input
-												type="password"
-												className="form-control"
-												id="inputPassword3"
-												placeholder="Password"
-											/>
-										</div>
-									</div>
-									<div className="form-group row">
-										<div className="col-sm-10 ">
-											<button type="submit" className="btn btn-primary">
-												Log in
-											</button>
-											<Context.Consumer>
-												{({ store, actions }) => {
-													return (
-														<div>
-															<div className="input-group mb-3">
-																<input
-																	name="LoginRegister"
-																	type="text"
-																	className="form-control"
-																	placeholder="Recipient's username"
-																	aria-label="Recipient's username"
-																	aria-describedby="button-addon2"
-																/>
-															</div>
+									<Context.Consumer>
+										{({ store, actions }) => {
+											return (
+												<div>
+													<div className="form-group row">
+														<label
+															htmlFor="inputEmail3"
+															className="col-sm-3 col-form-label">
+															Username
+														</label>
+														<div className="col-sm-10">
+															<input
+																name="username"
+																type="username"
+																className="form-control"
+																id="inputEmail3"
+																placeholder="Username"
+															/>
+														</div>
+													</div>
+													<div className="form-group row">
+														<label
+															htmlFor="inputPassword3"
+															className="col-sm-3 col-form-label">
+															Password
+														</label>
+														<div className="col-sm-10">
+															<input
+																name="password"
+																type="password"
+																className="form-control"
+																id="inputPassword3"
+																placeholder="Password"
+															/>
+														</div>
+													</div>
+													<div className="form-group row">
+														<div className="input-group mb-3">
 															<button
 																onClick={() =>
 																	actions.addPerson(
-																		document.querySelector("[name=person]").value
-																	)
+																		document.querySelector("[name=username]").value
+																	)(document.querySelector("[name=password]").value)
 																}
 																className="btn btn-secondary">
 																{" "}
-																Add task
+																Log in
 															</button>
 														</div>
-													);
-												}}
-											</Context.Consumer>
-										</div>
-									</div>
+													</div>
+												</div>
+											);
+										}}
+									</Context.Consumer>
 								</ul>
 							</p>
 						</div>
@@ -98,8 +91,6 @@ export class LoginRegister extends React.Component {
 						</div>
 					</div>
 				</div>
-
-				<br />
 			</div>
 		);
 	}

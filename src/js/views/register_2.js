@@ -42,6 +42,19 @@ export class Register_2 extends React.Component {
 													/>
 												</div>
 											</div>
+											<div className="form-row">
+												<div className="col-md mb-3">
+													<label htmlFor="inputUsername3">Userename</label>
+
+													<input
+														type="username"
+														name="username"
+														className="form-control"
+														id="inputUsername3"
+														placeholder="Username"
+													/>
+												</div>
+											</div>
 
 											<div className="form-row">
 												<div className="col-md mb-3">
@@ -111,13 +124,26 @@ export class Register_2 extends React.Component {
 												</div>
 											</div>
 											<hr />
+											<div className="form-group row">
+												<div className="input-group mb-3" />
+											</div>
 											<div className="form-row">
 												<div className="col-sm-10">
 													<button
 														type="submit"
 														className="btn btn-primary float-right"
-														onClick={() => actions.addPerson()}>
-														Create user
+														onClick={() =>
+															actions.addPerson(
+																document.querySelector("[name=email]").value
+															)(document.querySelector("[name=password]").value)(
+																document.querySelector("[name=username]").value
+															)(document.querySelector("[name=lastname]").value)(
+																document.querySelector("[name=firstname]").value
+															)(document.querySelector("[name=middlename]").value)(
+																document.querySelector("[name=dayPhone]").value
+															)(document.querySelector("[name=mobile]").value)
+														}>
+														Create User
 													</button>
 												</div>
 											</div>
