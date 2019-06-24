@@ -9,19 +9,21 @@ export class Options extends React.Component {
 			<div className="text-center mt-5">
 				<div className="card-deck">
 					<div className="card">
+						<div className="card-header">
+							<h4>Application to Register Permanent Residence or Adjust Status (I-485)</h4>
+						</div>
 						<div className="card-body">
-							<h2 className="card-title">
-								<u>Application to Register Permanent Residence or Adjust Status (I-485)</u>
-							</h2>
-							<p className="card-text">
-								Form I-485, Application to Register Permanent Residence or Adjust Status, is used by a
-								person in the United States to apply for lawful permanent resident status.
+							<p>
+								{" "}
+								Register Permanent Residence or Adjust Status, is used by a person in the United States
+								to apply for lawful permanent resident status.
 							</p>
-							<p className="text-center">
-								<Link to="/green_card_list_selection">
-									<button className="btn btn-primary">Apply for a {"green card"}</button>
-								</Link>
-							</p>
+						</div>
+
+						<div className="card-footer">
+							<Link to="/green_card_list_selection">
+								<button className="btn btn-primary">Apply for a {"green card"}</button>
+							</Link>
 						</div>
 					</div>
 
@@ -37,16 +39,17 @@ export class Options extends React.Component {
 								application to apply for an initial nonimmigrant status. You may also use this
 								application if you are a nonimmigrant F-1 or M-1 student applying for reinstatement.
 							</p>
-							<p className="text-center">
-								<Link to="/form">
-									<button className="btn btn-primary">Apply for Student Visa</button>
-								</Link>
-							</p>{" "}
+						</div>
+						<div className="card-footer">
+							<Link to="/form">
+								<button className="btn btn-primary">Apply for Student Visa</button>
+							</Link>
 						</div>
 					</div>
 				</div>
 				<a href="#" className="btn btn-dangerfloat-right">
-					Continue
+					{" "}
+					Continue{" "}
 				</a>
 			</div>
 		);

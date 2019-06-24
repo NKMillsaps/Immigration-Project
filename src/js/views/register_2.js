@@ -30,17 +30,15 @@ export class Register_2 extends React.Component {
 												</div>
 											</div>
 											<div className="form-row">
-												<div className="col-md mb-3">
-													<label htmlFor="inputPassword3">Password</label>
+												<label htmlFor="inputPassword3">Password</label>
 
-													<input
-														type="password"
-														name="password"
-														className="form-control"
-														id="inputPassword3"
-														placeholder="Password"
-													/>
-												</div>
+												<input
+													type="password"
+													name="password"
+													className="form-control"
+													id="inputPassword3"
+													placeholder="Password"
+												/>
 											</div>
 											<div className="form-row">
 												<div className="col-md mb-3">
