@@ -18,7 +18,7 @@ export class Home extends React.Component {
 					<div className="jumbotron jumbotron-fluid border border-light">
 						<div className="container shadow-lg p-3 mb-5 rounded">
 							<div className="container">
-								<h1 className="font-weight-bold text-center">Application ZOOM</h1>
+								<h1 className="font-weight-bold text-center">Immigration ZOOM</h1>
 								<p className="lead">
 									<small>
 										<em>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
-
+import { GetState } from "../store/flux";
 import "../../styles/demo.scss";
 
 export class Register_2 extends React.Component {
@@ -126,7 +126,7 @@ export class Register_2 extends React.Component {
 											type="submit"
 											className="btn btn-primary mx-auto p-2"
 											onClick={() =>
-												actions.addPerson(document.querySelector("[name=email]").value)(
+												actions.person(document.querySelector("[name=email]").value)(
 													document.querySelector("[name=password]").value
 												)(document.querySelector("[name=username]").value)(
 													document.querySelector("[name=lastname]").value

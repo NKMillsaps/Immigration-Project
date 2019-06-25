@@ -11,7 +11,7 @@ export class LoginRegister extends React.Component {
 		return (
 			<div className="container">
 				<div className="card">
-					<div className="card-header text-center">
+					<div className="card-header text-center text-warning">
 						<h4>If you are existing customer please LOG IN</h4>
 					</div>
 
@@ -63,7 +63,7 @@ export class LoginRegister extends React.Component {
 				</div>
 
 				<div className="card">
-					<div className="card-header text-center">
+					<div className="card-header text-center text-warning">
 						<h4 className="card-title">If you are a new customer please</h4>
 					</div>
 

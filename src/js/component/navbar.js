@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logozoom2.png";
+import "../../styles/navbar.scss";
 
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar sticky-top navbar-light bg-light mb-3">
+			<nav className="navbar sticky-top navbar-light bg-light mb-1">
 				<Link to="/">
 					<img src={logo} />
 				</Link>
