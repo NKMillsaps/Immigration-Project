@@ -6,9 +6,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Form } from "./views/form";
 import { FormCopy } from "./views/form_copy";
-
-import { Register } from "./views/register";
-import { Register_2 } from "./views/register_2";
+import { RegisterMain } from "./views/registerMain";
+import { SpouseForm } from "./views/spouseForm";
 import { LoginRegister } from "./views/loginRegister";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -47,8 +46,8 @@ export class Layout extends React.Component {
 									<Route exact path="/i130apetition" component={I130apetition} />
 									<Route exact path="/formcopy" component={FormCopy} />
 									<Route exact path="/doctors" component={Doctors} />
-									<Route path="/register" component={Register} />
-									<Route path="/register_2" component={Register_2} />
+									<Route exact path="/spouse" component={SpouseForm} />
+									<Route exact path="/register" component={RegisterMain} />
 									<Route path="/loginregister" component={LoginRegister} />
 									<Route path="/options" component={Options} />
 									<Route path="/creditcard" component={CreditCard} />

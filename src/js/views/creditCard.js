@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export class CreditCard extends React.Component {
 	render() {
@@ -238,15 +239,22 @@ export class CreditCard extends React.Component {
 										<p className="text-left">Add your notes here</p>
 									</div>
 								</div>
-
-								<div className="card-footer text-right">
-									<button type="reset" className="btn btn-secondary btn-lg">
-										Cancel
-									</button>
-									<button type="submit" value="reset" className="btn btn-primary btn-lg">
-										Submit
-									</button>
-								</div>
+								<Context.Consumer>
+									{({ store }) => {
+										return (
+											<div className="card-footer text-right">
+												<button type="reset" className="btn btn-secondary btn-lg">
+													Cancel
+												</button>
+												<button
+													className="btn btn-primary mx-auto p-2"
+													onCLick={() => actions.tryMethod()}>
+													Submit Payment
+												</button>
+											</div>
+										);
+									}}
+								</Context.Consumer>
 							</form>
 						</div>
 					</div>

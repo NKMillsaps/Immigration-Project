@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
-import { Register_2 } from "../views/register_2.js";
+import { RegisterMain } from "../views/registerMain.js";
 
 import "../../styles/demo.scss";
 
@@ -23,28 +22,27 @@ export class LoginRegister extends React.Component {
 										<div className="form-group">
 											<input
 												name="username"
-												type="username"
+												type="text"
 												className="form-control"
-												id="inputUsername3"
 												placeholder="Username"
 											/>
 										</div>
 
 										<div className="form-group">
 											<input
-												name="password"
-												type="password"
+												name="email"
+												type="text"
 												className="form-control"
-												id="inputPassword3"
-												placeholder="Password"
+												placeholder="Username"
 											/>
 										</div>
 									</div>
 									<div className="card-footer text-center">
 										<button
 											onClick={() =>
-												actions.addPerson(document.querySelector("[name=username]").value)(
-													document.querySelector("[name=password]").value
+												actions.loginUser(
+													document.querySelector("[name=username]").value,
+													document.querySelector("[name=email]").value
 												)
 											}
 											className="btn btn-primary">
@@ -68,7 +66,7 @@ export class LoginRegister extends React.Component {
 					</div>
 
 					<div className="card-footer text-center">
-						<Link to="/Register_2">
+						<Link to="/register">
 							<button id="button1" className="btn btn-primary">
 								REGISTER
 							</button>
@@ -79,3 +77,6 @@ export class LoginRegister extends React.Component {
 		);
 	}
 }
+// actions.addPerson(
+// 													document.querySelector("[name=username]").value,
+// 													document.querySelector("[name=password]").value

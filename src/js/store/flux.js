@@ -16,21 +16,26 @@ const getState = ({ getStore, setStore }) => {
 		},
 
 		actions: {
-			addPerson: () => {
+			tryMethod: () => {
+				console.log("ciao");
+			},
+			registerPerson: (username, email, lastname, firstname, middlename, dayPhone, mobile) => {
 				const store = getStore();
+				console.log("added user");
 
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						email: "email",
-						password: "password",
-						username: "username",
-						lastname: "lastname",
-						firstname: "firstname",
-						middlename: "middlename",
-						dayPhone: "dayPhone",
-						mobile: "mobile"
+						email: email,
+						username: username,
+						lastname: lastname,
+						firstname: firstname,
+						middlename: middlename,
+						dayPhone: dayPhone,
+						mobile: mobile,
+						spouse: [],
+						application: []
 					})
 				}).then(getDataUpdated => {
 					fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person")
@@ -42,7 +47,28 @@ const getState = ({ getStore, setStore }) => {
 				});
 			},
 
-			addSpouse: (email, password, lastName, firstName, middleName, dayPhone, mobile) => {
+			loginUser: (username, email) => {
+				const store = getStore();
+				const userLogIndex = store.person.findIndex(x => {
+					return x.email === email;
+				});
+				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/login", {
+					method: "POST",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						username: username,
+						email: email
+					})
+				})
+					.then(res => res.json())
+					.then(data => {
+						console.log(data);
+						localStorage.setItem("jwt", data.jwt);
+					})
+					.catch(error => console.error("Error:", error));
+			},
+
+			addSpouse: (email, lastName, firstName, middleName, dayPhone, mobile) => {
 				const store = getStore();
 
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/spouse", {
@@ -50,7 +76,7 @@ const getState = ({ getStore, setStore }) => {
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						email: email,
-						password: password,
+
 						lastname: lastName,
 						firstname: firstName,
 						middlename: middleName,

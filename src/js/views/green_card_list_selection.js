@@ -11,7 +11,6 @@ export class Green_card_list_selection extends React.Component {
 					<h3>The List of Application Forms to Register Permanent Residence </h3>
 				</div>
 				<ol>
-					<li> Form G1145 E-Notification of Application/Petition Acceptance </li>
 					<li> I-130 Petition for Alien Relative</li>
 					<li> I-130A Supplemental Information for Spouse Beneficiary </li>{" "}
 					<li> I-864 Affidavit of Support</li>

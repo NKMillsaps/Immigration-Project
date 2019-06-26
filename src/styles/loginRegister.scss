@@ -1,0 +1,24 @@
+/*
+    General Styles
+*/
+@import url('https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css');
+
+
+
+.button1 {
+    position: center
+}
+hr { background-color: rgb(44, 124, 148); height: 1px; border: 0; }
+
+.form-group {width: 35rem; background-color: #4E5D6C; }
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}

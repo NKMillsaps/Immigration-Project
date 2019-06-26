@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
-import { GetState } from "../store/flux";
+
 import "../../styles/demo.scss";
 
-export class Register_2 extends React.Component {
+export class RegisterMain extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<ul className="list-group">
-					<Context.Consumer>
-						{({ store, actions }) => {
-							return (
+				<Context.Consumer>
+					{({ actions }) => {
+						return (
+							<React.Fragment>
 								<div className="form-group mx-auto p-2">
 									<div className="card-header text-center">
 										<h4>Registration Form</h4>
@@ -21,35 +21,22 @@ export class Register_2 extends React.Component {
 										<div className="col-md mb-3">
 											<label htmlFor="inputEmail">Email Address</label>
 											<input
-												type="email"
+												type="text"
 												className="form-control"
 												name="email"
-												id="inputEmail"
 												placeholder="Email"
-												required
 											/>
 										</div>
 									</div>
-									<div className="form-row">
-										<label htmlFor="inputPassword3">Password</label>
 
-										<input
-											type="password"
-											name="password"
-											className="form-control"
-											id="inputPassword3"
-											placeholder="Password"
-										/>
-									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
 											<label htmlFor="inputUsername3">Userename</label>
 
 											<input
-												type="username"
+												type="text"
 												name="username"
 												className="form-control"
-												id="inputUsername3"
 												placeholder="Username"
 											/>
 										</div>
@@ -62,7 +49,6 @@ export class Register_2 extends React.Component {
 												type="text"
 												name="lastname"
 												className="form-control"
-												id="validationDefault01"
 												placeholder="Last name"
 											/>
 										</div>
@@ -74,9 +60,7 @@ export class Register_2 extends React.Component {
 												type="text"
 												name="firstname"
 												className="form-control"
-												id="validationDefault02"
 												placeholder="First name"
-												required
 											/>
 										</div>
 									</div>
@@ -87,9 +71,7 @@ export class Register_2 extends React.Component {
 												type="text"
 												name="middlename"
 												className="form-control"
-												id="validationDefault02"
 												placeholder="Middle name"
-												required
 											/>
 										</div>
 									</div>
@@ -98,10 +80,9 @@ export class Register_2 extends React.Component {
 										<div className="col-md mb-3">
 											<label htmlFor="validationDefault01">Daytime Phone Number</label>
 											<input
-												type="tel"
+												type="text"
 												name="dayPhone"
 												className="form-control"
-												id="validationDefault01"
 												placeholder="123-456-7890"
 												maxLength="12"
 											/>
@@ -111,39 +92,36 @@ export class Register_2 extends React.Component {
 										<div className="col-md mb-3">
 											<label htmlFor="validationDefault02">Mobile Phone Number</label>
 											<input
-												type="tel"
+												type="text"
 												name="mobile"
 												className="form-control"
-												id="validationDefault02"
 												placeholder="123-456-7890"
 												maxLength="12"
 											/>
 										</div>
 									</div>
-
 									<div className="form-row">
 										<button
-											type="submit"
-											className="btn btn-primary mx-auto p-2"
 											onClick={() =>
-												actions.person(document.querySelector("[name=email]").value)(
-													document.querySelector("[name=password]").value
-												)(document.querySelector("[name=username]").value)(
-													document.querySelector("[name=lastname]").value
-												)(document.querySelector("[name=firstname]").value)(
-													document.querySelector("[name=middlename]").value
-												)(document.querySelector("[name=dayPhone]").value)(
+												actions.registerPerson(
+													document.querySelector("[name=username]").value,
+													document.querySelector("[name=email]").value,
+													document.querySelector("[name=lastname]").value,
+													document.querySelector("[name=firstname]").value,
+													document.querySelector("[name=middlename]").value,
+													document.querySelector("[name=dayPhone]").value,
 													document.querySelector("[name=mobile]").value
 												)
-											}>
+											}
+											className="btn btn-primary mx-auto p-2">
 											Create User
 										</button>
 									</div>
 								</div>
-							);
-						}}
-					</Context.Consumer>
-				</ul>
+							</React.Fragment>
+						);
+					}}
+				</Context.Consumer>
 			</div>
 		);
 	}
@@ -160,4 +138,40 @@ export class Register_2 extends React.Component {
 
 // 															document.querySelector("[name=countryOfBirth]").value,
 // 															document.querySelector("[name=citizenship]").value,
-// 															document.querySelector("[name=mobile]").value
+// 															document.querySelector("[name=mobile]").value onClick={() =>
+// 	actions.addPerson(
+// 		document.querySelector("[name=email]").value,
+// 		document.querySelector("[name=password]").value,
+// 		document.querySelector("[name=username]").value,
+// 		document.querySelector("[name=lastname]").value,
+// 		document.querySelector("[name=firstname]").value,
+// 		document.querySelector("[name=middlename]").value,
+// 		document.querySelector("[name=dayPhone]").value,
+// 		document.querySelector("[name=mobile]").value
+// 	)
+// }
+
+// onCLick={() =>
+// 												actions.registerPerson(
+// document.querySelector("[name=username]").value,
+// document.querySelector("[name=email]").value,
+// document.querySelector("[name=lastname]").value,
+// document.querySelector("[name=firstname]").value,
+// document.querySelector("[name=middlename]").value,
+// document.querySelector("[name=dayPhone]").value,
+// document.querySelector("[name=mobile]").value
+// 												)
+// 											}
+
+// <button className="btn btn-primary mx-auto p-2" onCLick={() => actions.tryMethod()}>
+// 									Create User
+// 								</button>
+
+// <div className="form-row">
+// 										<button
+// 											className="btn btn-primary mx-auto p-2"
+// 											onCLick={() => actions.tryMethod()}>
+// 											Create User
+// 										</button>
+// 									</div>
+// 								</div>

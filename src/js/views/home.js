@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { Options } from "../views/options.js";
 import { I130apetition } from "../views/i130petition.js";
 import { CreditCard } from "../views/creditCard.js";
-import { Register } from "../views/register.js";
-import { Register_2 } from "../views/register_2.js";
 import { Green_card_list } from "../views/green_card_list.js";
 import { Green_card_list_selection } from "../views/green_card_list_selection.js";
 
