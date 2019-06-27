@@ -1,4 +1,5 @@
 import React from "react";
+import { Context } from "../store/appContext";
 
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
@@ -6,18 +7,42 @@ import { Link } from "react-router-dom";
 export class Green_card_list_selection extends React.Component {
 	render() {
 		return (
-			<div className="card mx-auto p-2">
-				<div className="card-header text-center">
+			<div className="container mx-auto p-2">
+				<div className="row card-header text-center mb-1">
 					<h3>The List of Application Forms to Register Permanent Residence </h3>
 				</div>
-				<ol>
-					<li> I-130 Petition for Alien Relative</li>
-					<li> I-130A Supplemental Information for Spouse Beneficiary </li>{" "}
-					<li> I-864 Affidavit of Support</li>
-					<li> I-485 Application to Register Permanent Residence Or Adjust Status</li>{" "}
-					<li> I-693 Report of Medical Examination and Vaccination Record (Sealed)</li>{" "}
-					<li> I-765 Application For Employment Authorization</li>
-				</ol>
+				<div className="row mb-3">
+					<div className="col-8">
+						<h5>Form Name</h5>
+					</div>
+					<div className="col">
+						<h5>Edit</h5>
+					</div>
+					<div className="col">
+						<h5>Status</h5>
+					</div>
+				</div>
+
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return store.forms.map((item, index) => {
+							return (
+								<div key={index} className="row mb-2">
+									<div className="col-8">{item.forms_name}</div>
+
+									<div className="col">
+										<Link to={"/form/" + item.forms_name}>
+											<i className="far fa-clipboard fa-2x text-info" />
+										</Link>
+									</div>
+									<div className="col text-center ">
+										<input className="form-check-input" type="checkbox" value="" />
+									</div>
+								</div>
+							);
+						});
+					}}
+				</Context.Consumer>
 
 				<div className="card-footer text-right">
 					<Link to="/green_card_list">

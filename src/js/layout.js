@@ -42,7 +42,7 @@ export class Layout extends React.Component {
 							<div className="col p-0">
 								<Switch>
 									<Route exact path="/" component={Home} />
-									<Route exact path="/form" component={Form} />
+									<Route exact path="/form/:formname" component={Form} />
 									<Route exact path="/i130apetition" component={I130apetition} />
 									<Route exact path="/formcopy" component={FormCopy} />
 									<Route exact path="/doctors" component={Doctors} />

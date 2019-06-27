@@ -15,11 +15,11 @@ export class SpouseForm extends React.Component {
 							<React.Fragment>
 								<div className="form-group mx-auto p-2">
 									<div className="card-header text-center">
-										<h4>U.S Citizen Registration Form (Petitioner) </h4>
+										<h4>Spouse Information</h4>
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="inputEmail">Email Address</label>
+											<label htmlFor="inputEmail">Spouse Email Address</label>
 											<input
 												type="text"
 												className="form-control"
@@ -31,7 +31,7 @@ export class SpouseForm extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">Last Name (Family name)</label>
+											<label htmlFor="validationDefault01">Spouse Last Name (Family name)</label>
 											<input
 												type="text"
 												name="lastname"
@@ -42,7 +42,7 @@ export class SpouseForm extends React.Component {
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">First Name</label>
+											<label htmlFor="validationDefault02">Spouse First Name</label>
 											<input
 												type="text"
 												name="firstname"
@@ -53,7 +53,7 @@ export class SpouseForm extends React.Component {
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+											<label htmlFor="validationDefault02">Spouse Middle Name (Patronimic)</label>
 											<input
 												type="text"
 												name="middlename"
@@ -65,7 +65,7 @@ export class SpouseForm extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">Daytime Phone Number</label>
+											<label htmlFor="validationDefault01">Spouse Daytime Phone Number</label>
 											<input
 												type="text"
 												name="dayPhone"
@@ -77,7 +77,7 @@ export class SpouseForm extends React.Component {
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Mobile Phone Number</label>
+											<label htmlFor="validationDefault02">Spouse Mobile Phone Number</label>
 											<input
 												type="text"
 												name="mobile"
@@ -89,7 +89,20 @@ export class SpouseForm extends React.Component {
 									</div>
 									<Link to="/i130apetition">
 										<div className="form-row">
-											<button className="btn btn-primary mx-auto p-2">Create User</button>
+											<button
+												className="btn btn-primary mx-auto p-2"
+												onClick={() =>
+													actions.addSpouse(
+														document.querySelector("[name=email]").value,
+														document.querySelector("[name=lastname]").value,
+														document.querySelector("[name=firstname]").value,
+														document.querySelector("[name=middlename]").value,
+														document.querySelector("[name=dayPhone]").value,
+														document.querySelector("[name=mobile]").value
+													)
+												}>
+												Submit
+											</button>
 										</div>
 									</Link>
 								</div>
@@ -113,14 +126,14 @@ export class SpouseForm extends React.Component {
 		// 															document.querySelector("[name=citizenship]").value,
 		// 															document.querySelector("[name=mobile]").value onClick={() =>
 		// 	actions.addPerson(
-		// 		document.querySelector("[name=email]").value,
-		// 		document.querySelector("[name=password]").value,
-		// 		document.querySelector("[name=username]").value,
-		// 		document.querySelector("[name=lastname]").value,
-		// 		document.querySelector("[name=firstname]").value,
-		// 		document.querySelector("[name=middlename]").value,
-		// 		document.querySelector("[name=dayPhone]").value,
-		// 		document.querySelector("[name=mobile]").value
+		// document.querySelector("[name=email]").value,
+		// document.querySelector("[name=password]").value,
+		// document.querySelector("[name=username]").value,
+		// document.querySelector("[name=lastname]").value,
+		// document.querySelector("[name=firstname]").value,
+		// document.querySelector("[name=middlename]").value,
+		// document.querySelector("[name=dayPhone]").value,
+		// document.querySelector("[name=mobile]").value
 		// 	)
 		// }
 

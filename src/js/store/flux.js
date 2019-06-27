@@ -81,7 +81,7 @@ const getState = ({ getStore, setStore }) => {
 						firstname: firstName,
 						middlename: middleName,
 
-						dayphone: dayPhone,
+						dayPhone: dayPhone,
 						mobile: mobile
 					})
 				}).then(getDataUpdated => {
