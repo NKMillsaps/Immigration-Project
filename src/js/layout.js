@@ -8,6 +8,7 @@ import { Form } from "./views/form";
 import { FormCopy } from "./views/form_copy";
 import { RegisterMain } from "./views/registerMain";
 import { SpouseForm } from "./views/spouseForm";
+import { AddressForm } from "./views/addressForm";
 import { LoginRegister } from "./views/loginRegister";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -44,7 +45,7 @@ export class Layout extends React.Component {
 									<Route exact path="/" component={Home} />
 									<Route exact path="/form/:formname" component={Form} />
 									<Route exact path="/i130apetition" component={I130apetition} />
-									<Route exact path="/formcopy" component={FormCopy} />
+									<Route exact path="/address-form" component={AddressForm} />
 									<Route exact path="/doctors" component={Doctors} />
 									<Route exact path="/spouse" component={SpouseForm} />
 									<Route exact path="/register" component={RegisterMain} />

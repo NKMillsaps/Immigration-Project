@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { RegisterMain } from "../views/registerMain.js";
+import PropTypes from "prop-types";
 
 import "../../styles/demo.scss";
 
@@ -33,7 +34,7 @@ export class LoginRegister extends React.Component {
 												name="email"
 												type="text"
 												className="form-control"
-												placeholder="Username"
+												placeholder="Email"
 											/>
 										</div>
 									</div>
@@ -42,7 +43,8 @@ export class LoginRegister extends React.Component {
 											onClick={() =>
 												actions.loginUser(
 													document.querySelector("[name=username]").value,
-													document.querySelector("[name=email]").value
+													document.querySelector("[name=email]").value,
+													this.props
 												)
 											}
 											className="btn btn-primary">
@@ -77,6 +79,9 @@ export class LoginRegister extends React.Component {
 		);
 	}
 }
+LoginRegister.propTypes = {
+	history: PropTypes.object
+};
 // actions.addPerson(
 // 													document.querySelector("[name=username]").value,
 // 													document.querySelector("[name=password]").value

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
@@ -12,14 +13,42 @@ const getState = ({ getStore, setStore }) => {
 			person: [],
 			spouse: [],
 			application: [],
-			forms: []
+			forms: [],
+			tempLoggedUser: null,
+			token: null
 		},
 
 		actions: {
 			tryMethod: () => {
 				console.log("ciao");
 			},
-			registerPerson: (username, email, lastname, firstname, middlename, dayPhone, mobile) => {
+			logoutUser: () => {
+				const store = getStore();
+				setStore({ token: null, tempLoggedUser: null });
+			},
+			updatePersonAddress: (address, apartment, zipCode, city, state, country, props) => {
+				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person", {
+					method: "PUT",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						address: address,
+						apartment: apartment,
+						zip_code: zipCode,
+						city: city,
+						state: state,
+						country: country
+					})
+				}).then(getDataUpdated => {
+					fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person")
+						.then(response => response.json())
+						.then(data => {
+							store.person = data;
+							setStore({ store });
+						});
+				});
+				props.history.push("/green_card_list_selection");
+			},
+			registerPerson: (username, email, lastname, firstname, middlename, dayPhone, mobile, props) => {
 				const store = getStore();
 				console.log("added user");
 
@@ -45,12 +74,16 @@ const getState = ({ getStore, setStore }) => {
 							setStore({ store });
 						});
 				});
+				props.history.push("/loginregister");
 			},
 
-			loginUser: (username, email) => {
+			loginUser: (username, email, props) => {
 				const store = getStore();
 				const userLogIndex = store.person.findIndex(x => {
 					return x.email === email;
+				});
+				let loggedUser = store.person.find(item => {
+					return item.email === email;
 				});
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/login", {
 					method: "POST",
@@ -63,9 +96,11 @@ const getState = ({ getStore, setStore }) => {
 					.then(res => res.json())
 					.then(data => {
 						console.log(data);
-						localStorage.setItem("jwt", data.jwt);
+						setStore({ token: data.jwt, tempLoggedUser: loggedUser });
 					})
 					.catch(error => console.error("Error:", error));
+
+				props.history.push("/green_card_list_selection");
 			},
 
 			addSpouse: (email, lastName, firstName, middleName, dayPhone, mobile) => {
@@ -133,6 +168,9 @@ const getState = ({ getStore, setStore }) => {
 			}
 		}
 	};
+};
+getState.propTypes = {
+	history: PropTypes.object
 };
 
 export default getState;

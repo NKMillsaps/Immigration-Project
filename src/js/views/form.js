@@ -11,6 +11,7 @@ export class Form extends React.Component {
 					let form = store.forms.find(item => {
 						return item.forms_name === name;
 					});
+
 					console.log(name);
 					console.log(form);
 					return (
@@ -33,7 +34,7 @@ export class Form extends React.Component {
 												className="form-control"
 												id="validationDefault03"
 												placeholder="A-Number"
-												maxLength="11"
+												defaultValue={store.tempLoggedUser.dayPhone}
 											/>
 										</div>
 										<div className="col-md mb-3">

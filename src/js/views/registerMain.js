@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import { Context } from "../store/appContext";
 
@@ -31,7 +32,7 @@ export class RegisterMain extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="inputUsername3">Userename</label>
+											<label htmlFor="inputUsername3">Username</label>
 
 											<input
 												type="text"
@@ -53,6 +54,7 @@ export class RegisterMain extends React.Component {
 											/>
 										</div>
 									</div>
+
 									<div className="form-row">
 										<div className="col-md mb-3">
 											<label htmlFor="validationDefault02">First Name</label>
@@ -63,8 +65,6 @@ export class RegisterMain extends React.Component {
 												placeholder="First name"
 											/>
 										</div>
-									</div>
-									<div className="form-row">
 										<div className="col-md mb-3">
 											<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
 											<input
@@ -87,8 +87,6 @@ export class RegisterMain extends React.Component {
 												maxLength="12"
 											/>
 										</div>
-									</div>
-									<div className="form-row">
 										<div className="col-md mb-3">
 											<label htmlFor="validationDefault02">Mobile Phone Number</label>
 											<input
@@ -100,6 +98,7 @@ export class RegisterMain extends React.Component {
 											/>
 										</div>
 									</div>
+
 									<div className="form-row">
 										<button
 											onClick={() =>
@@ -110,7 +109,8 @@ export class RegisterMain extends React.Component {
 													document.querySelector("[name=firstname]").value,
 													document.querySelector("[name=middlename]").value,
 													document.querySelector("[name=dayPhone]").value,
-													document.querySelector("[name=mobile]").value
+													document.querySelector("[name=mobile]").value,
+													this.props
 												)
 											}
 											className="btn btn-primary mx-auto p-2">
@@ -126,6 +126,9 @@ export class RegisterMain extends React.Component {
 		);
 	}
 }
+RegisterMain.propTypes = {
+	history: PropTypes.object
+};
 // document.querySelector("[name=email]").value,
 
 // 															document.querySelector("[name=lastname]").value,
