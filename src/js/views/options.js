@@ -8,7 +8,7 @@ export class Options extends React.Component {
 		return (
 			<div className="text-center mt-5">
 				<div className="card-deck">
-					<div className="card">
+					<div className="card border">
 						<div className="card-header">
 							<h4>Application to Register Permanent Residence or Adjust Status (I-485)</h4>
 						</div>
@@ -27,7 +27,7 @@ export class Options extends React.Component {
 						</div>
 					</div>
 
-					<div className="card">
+					<div className="card border">
 						<div className="card-header">
 							<h4>Application To Extend/Change Nonimmigrant Status (I-539)</h4>
 						</div>
