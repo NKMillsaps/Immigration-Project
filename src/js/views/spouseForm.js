@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -87,10 +87,14 @@ export class SpouseForm extends React.Component {
 											/>
 										</div>
 									</div>
-									<Link to="/i130apetition">
-										<div className="form-row">
+
+									<div className="form-row">
+										<Link to="/">
+											<button className="btn btn-primary float-left mx-auto p-2">Back</button>
+										</Link>
+										<div className="text-right">
 											<button
-												className="btn btn-primary mx-auto p-2"
+												className="btn btn-primary text-right mx-auto p-2"
 												onClick={() =>
 													actions.addSpouse(
 														document.querySelector("[name=email]").value,
@@ -98,13 +102,14 @@ export class SpouseForm extends React.Component {
 														document.querySelector("[name=firstname]").value,
 														document.querySelector("[name=middlename]").value,
 														document.querySelector("[name=dayPhone]").value,
-														document.querySelector("[name=mobile]").value
+														document.querySelector("[name=mobile]").value,
+														this.props
 													)
 												}>
 												Submit
 											</button>
 										</div>
-									</Link>
+									</div>
 								</div>
 							</React.Fragment>
 						);
@@ -112,6 +117,9 @@ export class SpouseForm extends React.Component {
 				</Context.Consumer>
 			</div>
 		);
+		SpouseForm.propTypes = {
+			match: PropTypes.object
+		};
 		// document.querySelector("[name=email]").value,
 
 		// 															document.querySelector("[name=lastname]").value,

@@ -5,7 +5,7 @@ export class FormCopy extends React.Component {
 	render() {
 		return (
 			<div className="text-justify mt-5">
-				<div className="container">
+				<div className="container1">
 					<form>
 						<p>Part 1</p>
 						<div className="form-row">

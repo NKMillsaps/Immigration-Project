@@ -15,35 +15,121 @@ const getState = ({ getStore, setStore }) => {
 			application: [],
 			forms: [],
 			tempLoggedUser: null,
+			tempLoggedSpouse: null,
+			tempLoggedSpous: null,
 			token: null
 		},
 
 		actions: {
-			tryMethod: () => {
-				console.log("ciao");
-			},
-			logoutUser: () => {
-				const store = getStore();
-				setStore({ token: null, tempLoggedUser: null });
-			},
-			updatePersonAddress: (address, apartment, zipCode, city, state, country, props) => {
-				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person", {
+			submitForm: (
+				email,
+				lastname,
+				firstname,
+				middlename,
+				dayPhone,
+				mobile,
+				address,
+				apartment,
+				zipCode,
+				city,
+				state,
+				country,
+				employerName,
+				employerAddress,
+				employerApartment,
+				employerZipCode,
+				employerCity,
+				employerState,
+				employerCountry,
+				employerOccupation
+			) => {
+				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/forms", {
 					method: "PUT",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
+						email: email,
+						lastname: lastname,
+						firstname: firstname,
+						middlename: middlename,
+						dayPhone: dayPhone,
+						mobile: mobile,
+
 						address: address,
 						apartment: apartment,
 						zip_code: zipCode,
 						city: city,
 						state: state,
-						country: country
+						country: country,
+
+						employer_name: employerName,
+						employer_address: employerAddress,
+						employer_apartment: employerAapartment,
+						employer_city: employerCity,
+						employer_state: employerState,
+						employer_zip_code: employerZipCode,
+
+						employer_country: employerCountry,
+						employer_occupation: employerOccupation
 					})
-				}).then(getDataUpdated => {
+				});
+			},
+			addApplication: () => {
+				const store = getStore();
+				console.log("added user");
+
+				fetch(
+					"https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person/" +
+						store.tempLoggedUser.id,
+					{
+						method: "PUT",
+						headers: { "Content-type": "application/json" },
+						body: JSON.stringify({
+							application: [5],
+							spouse: []
+						})
+					}
+				).then(getDataUpdated => {
 					fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person")
 						.then(response => response.json())
 						.then(data => {
 							store.person = data;
-							setStore({ store });
+							setStore(store);
+						});
+				});
+				props.history.push("/loginregister");
+			},
+			tryMethod: () => {
+				console.log("ciao");
+			},
+			logoutUser: () => {
+				const store = getStore();
+				setStore({ token: null, tempLoggedUser: null, tempLoggedSpouse: null });
+			},
+			updatePersonAddress: (address, apartment, zipCode, city, state, country, props) => {
+				const store = getStore();
+				fetch(
+					"https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person/" +
+						store.tempLoggedUser.id,
+					{
+						method: "PUT",
+						headers: { "Content-type": "application/json" },
+						body: JSON.stringify({
+							address: address,
+							apartment: apartment,
+							zip_code: zipCode,
+							city: city,
+							state: state,
+							country: country,
+							application: [],
+							spouse: []
+						})
+					}
+				).then(getDataUpdated => {
+					fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person")
+						.then(response => response.json())
+						.then(data => {
+							store.person = data;
+							setStore(store);
 						});
 				});
 				props.history.push("/green_card_list_selection");
@@ -71,7 +157,7 @@ const getState = ({ getStore, setStore }) => {
 						.then(response => response.json())
 						.then(data => {
 							store.person = data;
-							setStore({ store });
+							setStore(store);
 						});
 				});
 				props.history.push("/loginregister");
@@ -96,14 +182,18 @@ const getState = ({ getStore, setStore }) => {
 					.then(res => res.json())
 					.then(data => {
 						console.log(data);
-						setStore({ token: data.jwt, tempLoggedUser: loggedUser });
+						setStore({
+							token: data.jwt,
+							tempLoggedUser: loggedUser,
+							tempLoggedSpouse: loggedUser.spouse[0]
+						});
 					})
 					.catch(error => console.error("Error:", error));
 
-				props.history.push("/green_card_list_selection");
+				props.history.push("/");
 			},
 
-			addSpouse: (email, lastName, firstName, middleName, dayPhone, mobile) => {
+			addSpouse: (email, lastName, firstName, middleName, dayPhone, mobile, props) => {
 				const store = getStore();
 
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/spouse", {
@@ -119,14 +209,46 @@ const getState = ({ getStore, setStore }) => {
 						dayPhone: dayPhone,
 						mobile: mobile
 					})
-				}).then(getDataUpdated => {
-					fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/spouse")
-						.then(response => response.json())
-						.then(data => {
-							store.spouse = data;
-							getStore({ store });
+				})
+					.then(res => res.json())
+					.then(res => {
+						console.log(res);
+						setStore({
+							tempLoggedSpous: res.id
 						});
-				});
+					})
+					.then(getDataUpdated => {
+						fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/spouse")
+							.then(response => response.json())
+							.then(data => {
+								// store.spouse = data;
+								setStore({ spouse: data });
+							});
+					})
+
+					.then(updatePersonSpouse => {
+						fetch(
+							"https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person/" +
+								store.tempLoggedUser.id,
+							{
+								method: "PUT",
+								headers: { "Content-type": "application/json" },
+								body: JSON.stringify({
+									application: [],
+									spouse: [store.tempLoggedSpous]
+								})
+							}
+						);
+					})
+					.then(getDataUpdated => {
+						fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/person")
+							.then(response => response.json())
+							.then(updatePerson => {
+								// store.person = data;
+								setStore({ person: updatePerson });
+							});
+					});
+				props.history.push("/green_card_list_selection");
 			},
 
 			addApplication: application_name => {

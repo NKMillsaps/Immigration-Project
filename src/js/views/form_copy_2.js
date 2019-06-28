@@ -15,7 +15,7 @@ export class Form extends React.Component {
 					console.log(name);
 					console.log(form);
 					return (
-						<div className="container">
+						<div className="container1">
 							<div className="row">
 								<div className="col card-header">
 									<h1>{form.forms_name}</h1>

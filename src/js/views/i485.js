@@ -4,7 +4,7 @@ import "../../styles/home.scss";
 export class I485 extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container1">
 				<div className="text-justify mt-5">
 					<form>
 						<div className="form-row">
