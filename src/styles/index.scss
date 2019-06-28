@@ -22,10 +22,17 @@ hr { background-color: rgb(44, 124, 148); height: 1px; border: 0; }
 .navbar {
       border-bottom: 1px double white;
 }
+
+
 .footer {
       border-top: 1px double white;
 }
 
 .border:hover {
     border: 2px solid red;
+}
+
+.nav-link:hover {
+text-decoration: underline;
+color: #ff802c;
 }

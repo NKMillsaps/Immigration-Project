@@ -37,9 +37,9 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Navbar />
 						<div className="row">
-							<div className="col-2 p-0">
+							{/*<div className="col-2 p-0">
 								<NavbarSideLeft />
-							</div>
+							</div>*/}
 							<div className="col p-0">
 								<Switch>
 									<Route exact path="/" component={Home} />
