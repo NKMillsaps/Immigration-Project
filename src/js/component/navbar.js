@@ -49,9 +49,9 @@ export class Navbar extends React.Component {
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#/docs/4.0/layout/overview/">
+							<Link className="nav-link" to="/doctors">
 								Doctors
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="#">

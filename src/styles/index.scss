@@ -32,7 +32,7 @@ hr { background-color: rgb(44, 124, 148); height: 1px; border: 0; }
     border: 2px solid red;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link:active {
 text-decoration: underline;
 color: #ff802c;
 }
