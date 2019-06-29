@@ -19,7 +19,7 @@ export class LoginRegister extends React.Component {
 						{({ store, actions }) => {
 							return (
 								<div className="text-center">
-									<div className="card-body">
+									<div className="card-body ">
 										<div className="form-group">
 											<input
 												name="username"

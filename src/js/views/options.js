@@ -62,7 +62,7 @@ export class Options extends React.Component {
 										</div>
 										<div className="card-footer">
 											<Link to="/form">
-												<button className="btn btn-primary">Apply for Student Visa</button>
+												<button className="btn btn-primary">Apply Here</button>
 											</Link>
 										</div>
 									</div>

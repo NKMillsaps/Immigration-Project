@@ -54,7 +54,7 @@ export class Form extends React.Component {
 											/>
 										</div>
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Middle Name (Patronimic)</label>
+											<label htmlFor="validationDefault03">Middle Name (Patronimic)</label>
 											<input
 												type="text"
 												className="form-control"
@@ -67,7 +67,7 @@ export class Form extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">Daytime Phone Number</label>
+											<label htmlFor="validationDefault04">Daytime Phone Number</label>
 											<input
 												type="tel"
 												className="form-control"
@@ -77,7 +77,7 @@ export class Form extends React.Component {
 											/>
 										</div>
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Mobile Phone Number</label>
+											<label htmlFor="validationDefault05">Mobile Phone Number</label>
 											<input
 												type="tel"
 												className="form-control"
@@ -120,7 +120,7 @@ export class Form extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md-2 mb-3">
-											<label htmlFor="validationDefault03">Apt/Ste/Flr</label>
+											<label htmlFor="validationDefault06">Apt/Ste/Flr</label>
 											<input
 												type="text"
 												name="apartment"
@@ -131,7 +131,7 @@ export class Form extends React.Component {
 										</div>
 
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault03">City/Town</label>
+											<label htmlFor="validationDefault07">City/Town</label>
 											<input
 												type="text"
 												name="city"
@@ -153,13 +153,13 @@ export class Form extends React.Component {
 											/>
 										</div>
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault05">Zip code</label>
+											<label htmlFor="validationDefault08">Zip code</label>
 											<input
 												type="number"
 												name="zipCode"
 												className="form-control"
 												placeholder="Zip"
-												defaultValue={user.zip_code}
+												defaultValue={user.zipCode}
 											/>
 										</div>
 									</div>
@@ -171,55 +171,55 @@ export class Form extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">Spouse Last Name (Family name)</label>
+											<label htmlFor="validationDefault10">Spouse Last Name (Family name)</label>
 											<input
 												type="text"
 												className="form-control"
 												placeholder="Last name"
-												defaultValue={user.spouse[0].lastname}
+												defaultValue={user.spouse[0].spouseLastname}
 											/>
 										</div>
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Spouse First Name</label>
+											<label htmlFor="validationDefault11">Spouse First Name</label>
 											<input
 												type="text"
 												className="form-control"
 												placeholder="First name"
-												defaultValue={user.spouse[0].firstname}
+												defaultValue={user.spouse[0].spouseFirstname}
 											/>
 										</div>
 
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Spouse Middle Name (Patronimic)</label>
+											<label htmlFor="validationDefault12">Spouse Middle Name (Patronimic)</label>
 											<input
 												type="text"
 												className="form-control"
 												placeholder="Middle name"
-												defaultValue={user.spouse[0].middlename}
+												defaultValue={user.spouse[0].spouseMiddlename}
 											/>
 										</div>
 									</div>
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">Spouse Daytime Phone Number</label>
+											<label htmlFor="validationDefault13">Spouse Daytime Phone Number</label>
 											<input
 												type="text"
 												className="form-control"
 												placeholder="123-456-7890"
-												defaultValue={user.spouse[0].dayPhone}
+												defaultValue={user.spouse[0].spouseDayPhone}
 											/>
 										</div>
 
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Spouse Mobile Phone Number</label>
+											<label htmlFor="validationDefault14">Spouse Mobile Phone Number</label>
 											<input
 												type="text"
 												className="form-control"
 												placeholder="123-456-7890"
-												defaultValue={user.spouse[0].mobile}
+												defaultValue={user.spouse[0].spouseMobile}
 											/>
 										</div>
 									</div>
@@ -230,7 +230,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Email"
-												defaultValue={user.spouse[0].email}
+												defaultValue={user.spouse[0].spouseEmail}
 											/>
 										</div>
 									</div>
@@ -241,7 +241,7 @@ export class Form extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">
+											<label htmlFor="validationDefault15">
 												Name of Employer/Company/Organization
 											</label>
 											<input
@@ -278,18 +278,18 @@ export class Form extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault03">City/Town</label>
+											<label htmlFor="validationDefault16">City/Town</label>
 											<input type="text" className="form-control" name="employerCity" />
 										</div>
 
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault03">Province/Teritory/Region/Area</label>
+											<label htmlFor="validationDefault17">Province/Teritory/Region/Area</label>
 											<input type="text" className="form-control" name="employerState" />
 										</div>
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault05">Zip code/Postal code</label>
+											<label htmlFor="validationDefault17">Zip code/Postal code</label>
 											<input
 												type="number"
 												className="form-control"
@@ -299,13 +299,13 @@ export class Form extends React.Component {
 											/>
 										</div>
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault03">Country</label>
+											<label htmlFor="validationDefault18">Country</label>
 											<input type="text" className="form-control" name="employerCountry" />
 										</div>
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Your Ocupation/Position</label>
+											<label htmlFor="validationDefault19">Your Ocupation/Position</label>
 											<input
 												type="text"
 												name="employerOccupation"

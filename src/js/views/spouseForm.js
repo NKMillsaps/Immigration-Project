@@ -97,12 +97,12 @@ export class SpouseForm extends React.Component {
 												className="btn btn-primary text-right mx-auto p-2"
 												onClick={() =>
 													actions.addSpouse(
-														document.querySelector("[name=email]").value,
-														document.querySelector("[name=lastname]").value,
-														document.querySelector("[name=firstname]").value,
-														document.querySelector("[name=middlename]").value,
-														document.querySelector("[name=dayPhone]").value,
-														document.querySelector("[name=mobile]").value,
+														document.querySelector("[name=spouseEmail]").value,
+														document.querySelector("[name=spouseLastname]").value,
+														document.querySelector("[name=spouseFirstname]").value,
+														document.querySelector("[name=spouseMiddlename]").value,
+														document.querySelector("[name=spouseDayPhone]").value,
+														document.querySelector("[name=spouseMobile]").value,
 														this.props
 													)
 												}>

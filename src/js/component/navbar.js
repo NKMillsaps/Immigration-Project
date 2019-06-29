@@ -13,11 +13,6 @@ export class Navbar extends React.Component {
 				</Link>
 
 				<div className="ml-auto">
-					<ul className="nav bd-sidenav">
-						<li>
-							<a href="#how-it-works">Contacts</a>
-						</li>
-					</ul>
 					{/*<Link to="/modalf1">
 						<select className="custom-select">
 							<option selected>Languages</option>

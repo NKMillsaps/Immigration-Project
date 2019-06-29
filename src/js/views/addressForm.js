@@ -20,7 +20,7 @@ export class AddressForm extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="inputUsername3">Address</label>
+											<label htmlFor="inputaddress">Address</label>
 
 											<input
 												type="text"
@@ -54,7 +54,7 @@ export class AddressForm extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">City</label>
+											<label htmlFor="validationDefault03">City</label>
 											<input
 												type="text"
 												name="city"
@@ -63,7 +63,7 @@ export class AddressForm extends React.Component {
 											/>
 										</div>
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">State</label>
+											<label htmlFor="validationDefault04">State</label>
 											<input
 												type="text"
 												name="state"
@@ -75,7 +75,7 @@ export class AddressForm extends React.Component {
 
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">Country</label>
+											<label htmlFor="validationDefault05">Country</label>
 											<input
 												type="text"
 												name="country"
