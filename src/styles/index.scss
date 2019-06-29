@@ -13,3 +13,26 @@ img {
 body {font-family: 'Noto Sans KR', sans-serif;}
 
 hr { background-color: rgb(44, 124, 148); height: 1px; border: 0; }
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar {
+      border-bottom: 1px double white;
+}
+
+
+.footer {
+      border-top: 1px double white;
+}
+
+.border:hover {
+    border: 2px solid red;
+}
+
+.nav-link:hover, .nav-link:active {
+text-decoration: underline;
+color: #ff802c;
+}

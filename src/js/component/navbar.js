@@ -41,6 +41,45 @@ export class Navbar extends React.Component {
 							);
 						}}
 					</Context.Consumer>
+
+					<ul className="nav bd-sidenav">
+						<li className="nav-item">
+							<a className="nav-link active" href="##how-it-works">
+								Contacts
+							</a>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/doctors">
+								Doctors
+							</Link>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="#">
+								Translation Agencies
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="#">
+								Spanish{" "}
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="#">
+								Russian{" "}
+							</a>
+						</li>
+
+						<li className="nav-item">
+							<a className="nav-link" href="https://www.uscis.gov">
+								USCIS{" "}
+							</a>
+						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="/docs/4.0/about/overview/">
+								About
+							</a>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		);
