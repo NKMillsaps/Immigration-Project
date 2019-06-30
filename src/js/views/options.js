@@ -6,12 +6,11 @@ import { Link } from "react-router-dom";
 export class Options extends React.Component {
 	render() {
 		return (
-<<<<<<< HEAD
-			<Context.Consumer>
-				{({ store, actions }) => {
-					return (
-						<React.Fragment>
-							<div className="text-center mt-5">
+			<div>
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return (
+							<React.Fragment>
 								<div className="card-deck">
 									<div className="card">
 										<div className="card-header">
@@ -26,23 +25,8 @@ export class Options extends React.Component {
 												the United States to apply for lawful permanent resident status.
 											</p>
 										</div>
-=======
-			<div className="text-center mt-5">
-				<div className="card-deck">
-					<div className="card border">
-						<div className="card-header">
-							<h4>Application to Register Permanent Residence or Adjust Status (I-485)</h4>
-						</div>
-						<div className="card-body">
-							<p>
-								{" "}
-								Register Permanent Residence or Adjust Status, is used by a person in the United States
-								to apply for lawful permanent resident status.
-							</p>
-						</div>
->>>>>>> 772b13cb17c28c973bd98a6d86489914b8a778d7
 
-										<div className="card-footer">
+										<div className="card-footer text-center mt-5">
 											{store.tempLoggedUser ? (
 												<Link to="/green_card_list_selection">
 													<button className="btn btn-primary">
@@ -61,7 +45,6 @@ export class Options extends React.Component {
 										</div>
 									</div>
 
-<<<<<<< HEAD
 									<div className="card">
 										<div className="card-header">
 											<h4>Application To Extend/Change Nonimmigrant Status (I-539)</h4>
@@ -77,41 +60,18 @@ export class Options extends React.Component {
 												reinstatement.
 											</p>
 										</div>
-										<div className="card-footer">
+										<div className="card-footer text-center mt-5">
 											<Link to="/form">
 												<button className="btn btn-primary">Apply Here</button>
 											</Link>
 										</div>
 									</div>
 								</div>
-							</div>
-						</React.Fragment>
-					);
-				}}
-			</Context.Consumer>
-=======
-					<div className="card border">
-						<div className="card-header">
-							<h4>Application To Extend/Change Nonimmigrant Status (I-539)</h4>
-						</div>
-						<div className="card-body">
-							<p className="card-text">
-								You should use this application if you are one of the nonimmigrants listed below and
-								wish to apply to U.S. Citizenship and Immigration Services (USCIS) for an extension of
-								stay or a change to another nonimmigrant status. In certain situations, you may use this
-								application to apply for an initial nonimmigrant status. You may also use this
-								application if you are a nonimmigrant F-1 or M-1 student applying for reinstatement.
-							</p>
-						</div>
-						<div className="card-footer">
-							<Link to="/form">
-								<button className="btn btn-primary">Apply for Student Visa</button>
-							</Link>
-						</div>
-					</div>
-				</div>
+							</React.Fragment>
+						);
+					}}
+				</Context.Consumer>
 			</div>
->>>>>>> 772b13cb17c28c973bd98a6d86489914b8a778d7
 		);
 	}
 }
