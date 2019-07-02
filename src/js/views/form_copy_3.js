@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/form.scss";
+import "../../styles/home.scss";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ export class Form extends React.Component {
 					console.log(name);
 					console.log(form);
 					return (
-						<div className="card mx-auto">
+						<div className="container1">
 							<div className="row">
 								<div className="col card-header">
 									<h1>{form.forms_name}</h1>

@@ -10,7 +10,7 @@ export class LoginRegister extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="card">
+				<div className="card ">
 					<div className="card-header text-center text-warning">
 						<h4>If you are existing customer please LOG IN</h4>
 					</div>
@@ -19,7 +19,7 @@ export class LoginRegister extends React.Component {
 						{({ store, actions }) => {
 							return (
 								<div className="text-center">
-									<div className="card-body ">
+									<div className="card-body float-center ">
 										<div className="form-group">
 											<input
 												name="username"

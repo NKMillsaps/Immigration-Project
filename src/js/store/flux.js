@@ -35,19 +35,7 @@ const getState = ({ getStore, setStore }) => {
 				state,
 				country,
 				spouseEmail,
-				spouseFirstname,
-				spouseLastname,
-				spouseMiddlename,
-				spouseDayPhone,
-				spouseMobile,
-				employerName,
-				employerAddress,
-				employerApartment,
-				employerZipCode,
-				employerCity,
-				employerState,
-				employerCountry,
-				employerOccupation
+				employerName
 			) => {
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/forms", {
 					method: "PUT",
@@ -61,11 +49,6 @@ const getState = ({ getStore, setStore }) => {
 						mobile: mobile,
 
 						spouseEmail: spouseEmail,
-						spouseFirstname: spouseFirstname,
-						spouseLastname: spouseLastname,
-						spouseMiddlename: spouseMiddlename,
-						spouseDayPhone: spouseDayPhone,
-						spouseMobile: spouseMobile,
 
 						address: address,
 						apartment: apartment,
@@ -74,14 +57,7 @@ const getState = ({ getStore, setStore }) => {
 						state: state,
 						country: country,
 
-						employerNname: employerName,
-						employerAddress: employerAddress,
-						employerApartment: employerAapartment,
-						employerCity: employerCity,
-						employerState: employerState,
-						employerZipCode: employerZipCode,
-						employerCountry: employerCountry,
-						employerOccupation: employerOccupation
+						employerNname: employerName
 					})
 				});
 			},
@@ -205,27 +181,14 @@ const getState = ({ getStore, setStore }) => {
 				props.history.push("/");
 			},
 
-			addSpouse: (
-				spouseEmail,
-				spouseLastname,
-				spouseFirstname,
-				spouseMiddlename,
-				spouseDayPhone,
-				spouseMobile,
-				props
-			) => {
+			addSpouse: (spouseEmail, props) => {
 				const store = getStore();
 
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/spouse", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						spouseEmail: spouseEmail,
-						spouseLastname: spouseLastname,
-						spouseFirstname: spouseFirstname,
-						spouseMiddlename: spouseMiddlename,
-						spouseDayPhone: spouseDayPhone,
-						spouseMobile: spouseMobile
+						spouseEmail: spouseEmail
 					})
 				})
 					.then(res => res.json())
