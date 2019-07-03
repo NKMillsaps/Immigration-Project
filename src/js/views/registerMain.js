@@ -14,7 +14,7 @@ export class RegisterMain extends React.Component {
 					{({ actions }) => {
 						return (
 							<React.Fragment>
-								<div className="form-group mx-auto p-2">
+								<div className="card mx-auto">
 									<div className="card-header text-center">
 										<h4>Registration Form</h4>
 									</div>

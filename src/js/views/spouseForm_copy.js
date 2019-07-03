@@ -23,7 +23,7 @@ export class SpouseForm extends React.Component {
 											<input
 												type="text"
 												className="form-control"
-												name="spouseEmail"
+												name="email"
 												placeholder="Email"
 											/>
 										</div>
@@ -99,7 +99,10 @@ export class SpouseForm extends React.Component {
 													actions.addSpouse(
 														document.querySelector("[name=spouseEmail]").value,
 														document.querySelector("[name=spouseLastname]").value,
-
+														document.querySelector("[name=spouseFirstname]").value,
+														document.querySelector("[name=spouseMiddlename]").value,
+														document.querySelector("[name=spouseDayPhone]").value,
+														document.querySelector("[name=spouseMobile]").value,
 														this.props
 													)
 												}>
@@ -117,14 +120,6 @@ export class SpouseForm extends React.Component {
 		SpouseForm.propTypes = {
 			match: PropTypes.object
 		};
-		//
-
-		// 	document.querySelector("[name=spouseLastname]").value,
-		// 												document.querySelector("[name=spouseFirstname]").value,
-		// 												document.querySelector("[name=spouseMiddlename]").value,
-		// 												document.querySelector("[name=spouseDayPhone]").value,
-		// 												document.querySelector("[name=spouseMobile]").value,
-
 		// document.querySelector("[name=email]").value,
 
 		// 															document.querySelector("[name=lastname]").value,

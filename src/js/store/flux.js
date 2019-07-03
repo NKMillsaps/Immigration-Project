@@ -35,6 +35,7 @@ const getState = ({ getStore, setStore }) => {
 				state,
 				country,
 				spouseEmail,
+				spouseLastname,
 				employerName
 			) => {
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/forms", {
@@ -49,6 +50,7 @@ const getState = ({ getStore, setStore }) => {
 						mobile: mobile,
 
 						spouseEmail: spouseEmail,
+						spouseLastname: spouseLastname,
 
 						address: address,
 						apartment: apartment,
@@ -57,7 +59,7 @@ const getState = ({ getStore, setStore }) => {
 						state: state,
 						country: country,
 
-						employerNname: employerName
+						employerName: employerName
 					})
 				});
 			},
@@ -181,14 +183,15 @@ const getState = ({ getStore, setStore }) => {
 				props.history.push("/");
 			},
 
-			addSpouse: (spouseEmail, props) => {
+			addSpouse: (spouseEmail, spouseLastname, props) => {
 				const store = getStore();
 
 				fetch("https://3000-bbdde477-c4f0-438a-b439-92cb530db604.ws-us0.gitpod.io/spouse", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						spouseEmail: spouseEmail
+						spouseEmail: spouseEmail,
+						spouseLastname: spouseLastname
 					})
 				})
 					.then(res => res.json())
