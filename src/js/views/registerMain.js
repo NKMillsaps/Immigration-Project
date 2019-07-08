@@ -14,7 +14,7 @@ export class RegisterMain extends React.Component {
 					{({ actions }) => {
 						return (
 							<React.Fragment>
-								<div className="card mx-auto">
+								<div className="form-group mx-auto p-2">
 									<div className="card-header text-center">
 										<h4>Registration Form</h4>
 									</div>
@@ -103,8 +103,8 @@ export class RegisterMain extends React.Component {
 										<button
 											onClick={() =>
 												actions.registerPerson(
-													document.querySelector("[name=username]").value,
 													document.querySelector("[name=email]").value,
+													document.querySelector("[name=username]").value,
 													document.querySelector("[name=lastname]").value,
 													document.querySelector("[name=firstname]").value,
 													document.querySelector("[name=middlename]").value,

@@ -13,7 +13,7 @@ export class Options extends React.Component {
 							<React.Fragment>
 								<div className="card-deck">
 									<div className="card">
-										<div className="card-header">
+										<div className="card-header text-center">
 											<h4>
 												Application to Register Permanent Residence or Adjust Status (I-485)
 											</h4>
@@ -46,16 +46,13 @@ export class Options extends React.Component {
 									</div>
 
 									<div className="card">
-										<div className="card-header">
+										<div className="card-header text-center">
 											<h4>Application To Extend/Change Nonimmigrant Status (I-539)</h4>
 										</div>
 										<div className="card-body">
 											<p className="card-text">
-												You should use this application if you are one of the nonimmigrants
-												listed below and wish to apply to U.S. Citizenship and Immigration
-												Services (USCIS) for an extension of stay or a change to another
-												nonimmigrant status. In certain situations, you may use this application
-												to apply for an initial nonimmigrant status. You may also use this
+												You should use this application if you wish to apply for an extension of
+												stay or a change to another nonimmigrant status. You may also use this
 												application if you are a nonimmigrant F-1 or M-1 student applying for
 												reinstatement.
 											</p>

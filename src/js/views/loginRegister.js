@@ -10,15 +10,15 @@ export class LoginRegister extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="card ">
-					<div className="card-header text-center text-warning">
-						<h4>If you are existing customer please LOG IN</h4>
-					</div>
-
+				<div className="card-desk mx-auto ">
 					<Context.Consumer>
 						{({ store, actions }) => {
 							return (
-								<div className="text-center">
+								<div className="card text-center">
+									<div className="card-header text-warning">
+										<h4>If you are existing customer please LOG IN</h4>
+									</div>
+
 									<div className="card-body float-center ">
 										<div className="form-group">
 											<input
@@ -56,23 +56,24 @@ export class LoginRegister extends React.Component {
 							);
 						}}
 					</Context.Consumer>
-				</div>
-				<div className="card text-center">
-					{" "}
-					<h4> OR</h4>
-				</div>
 
-				<div className="card">
-					<div className="card-header text-center text-warning">
-						<h4 className="card-title">If you are a new customer please</h4>
+					<div className="card text-center">
+						{" "}
+						<h4> OR</h4>
 					</div>
 
-					<div className="card-footer text-center">
-						<Link to="/register">
-							<button id="button1" className="btn btn-primary">
-								REGISTER
-							</button>
-						</Link>
+					<div className="card">
+						<div className="card-header text-center text-warning">
+							<h4 className="card-title">If you are a new customer please</h4>
+						</div>
+
+						<div className="card-footer text-center">
+							<Link to="/register">
+								<button id="button1" className="btn btn-primary">
+									REGISTER
+								</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
