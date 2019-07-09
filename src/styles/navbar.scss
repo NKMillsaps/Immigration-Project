@@ -10,6 +10,23 @@
     text-align: right;
 
 }
+.tops { width: 100%;
+text-align: right;}
+
+
+#nav {
+text-align: justify;
+min-width: 500px;
+}
+#nav:after {
+content: '';
+display: inline-block;
+width: 100%;
+}
+#nav li {
+margin-top: 2%;
+display: inline-block;
+}
 
 
 
