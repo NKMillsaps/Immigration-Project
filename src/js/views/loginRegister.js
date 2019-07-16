@@ -9,71 +9,54 @@ import "../../styles/demo.scss";
 export class LoginRegister extends React.Component {
 	render() {
 		return (
-			<div className="container">
-				<div className="card-desk mx-auto ">
-					<Context.Consumer>
-						{({ store, actions }) => {
-							return (
-								<div className="card text-center">
-									<div className="card-header text-warning">
-										<h4>If you are existing customer please LOG IN</h4>
+			<div className="card bg-light mx-auto ">
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return (
+							<div className="card text-white text-center bg-primary mb-3">
+								<div className="card-body">
+									<h4 className="card-title">If you are existing customer please LOG IN</h4>
+									<hr />
+									<div className="form-group">
+										<input
+											name="username"
+											type="text"
+											className="form-control"
+											placeholder="Username"
+										/>
 									</div>
 
-									<div className="card-body float-center ">
-										<div className="form-group">
-											<input
-												name="username"
-												type="text"
-												className="form-control"
-												placeholder="Username"
-											/>
-										</div>
+									<div className="form-group">
+										<input name="email" type="text" className="form-control" placeholder="Email" />
+									</div>
 
-										<div className="form-group">
-											<input
-												name="email"
-												type="text"
-												className="form-control"
-												placeholder="Email"
-											/>
-										</div>
-									</div>
-									<div className="card-footer text-center">
-										<button
-											onClick={() =>
-												actions.loginUser(
-													document.querySelector("[name=username]").value,
-													document.querySelector("[name=email]").value,
-													this.props
-												)
-											}
-											className="btn btn-primary">
-											{" "}
-											LOG IN
-										</button>
-									</div>
+									<button
+										onClick={() =>
+											actions.loginUser(
+												document.querySelector("[name=username]").value,
+												document.querySelector("[name=email]").value,
+												this.props
+											)
+										}
+										className="btn btn-primary">
+										{" "}
+										LOG IN
+									</button>
 								</div>
-							);
-						}}
-					</Context.Consumer>
+							</div>
+						);
+					}}
+				</Context.Consumer>
 
-					<div className="card text-center">
-						{" "}
-						<h4> OR</h4>
-					</div>
-
-					<div className="card">
-						<div className="card-header text-center text-warning">
-							<h4 className="card-title">If you are a new customer please</h4>
-						</div>
-
-						<div className="card-footer text-center">
-							<Link to="/register">
-								<button id="button1" className="btn btn-primary">
-									REGISTER
-								</button>
-							</Link>
-						</div>
+				<div className="card text-white bg-primary mb-3">
+					<div className="card-body text-center">
+						<h4 className="card-title">If you are a new customer please</h4>
+						<hr />
+						<Link to="/register">
+							<button id="button1" className="btn btn-primary">
+								REGISTER
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -86,3 +69,5 @@ LoginRegister.propTypes = {
 // actions.addPerson(
 // 													document.querySelector("[name=username]").value,
 // 													document.querySelector("[name=password]").value
+
+// <div className="card bg-light mb-3 mx-auto ">

@@ -9,14 +9,14 @@ import "../../styles/demo.scss";
 export class RegisterMain extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container ">
 				<Context.Consumer>
 					{({ actions }) => {
 						return (
 							<React.Fragment>
-								<div className="form-group mx-auto p-2">
-									<div className="card-header text-center">
-										<h4>Registration Form</h4>
+								<div className="form-group text-white bg-dark mx-auto p-2">
+									<div className="card-header text-white text-center">
+										<h4 className="card-title text-white">Registration Form</h4>
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
@@ -98,7 +98,7 @@ export class RegisterMain extends React.Component {
 											/>
 										</div>
 									</div>
-
+									<hr />
 									<div className="form-row">
 										<button
 											onClick={() =>
@@ -113,7 +113,7 @@ export class RegisterMain extends React.Component {
 													this.props
 												)
 											}
-											className="btn btn-primary mx-auto p-2">
+											className="btn btn-secondary mx-auto p-2">
 											Create User
 										</button>
 									</div>

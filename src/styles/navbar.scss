@@ -3,20 +3,22 @@
     width: 120px;
     height: 120px;
     margin-left: 15px;
-};
+}
+.container{width:100%;}
+	.dropdown-menu{position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: 0px; will-change: transform;}
 
 .navbar {
     font-size: 1.1rem;
-    text-align: right;
+    // text-align: right;
+
 
 }
-.tops { width: 100%;
-text-align: right;}
+// .tops { width: 100%;}
 
 
 #nav {
-text-align: justify;
-min-width: 500px;
+float: right;
+// min-width: 500px;
 }
 #nav:after {
 content: '';
