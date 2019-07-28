@@ -176,7 +176,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Last name"
-												defaultValue={user.spouse[0].spouseLastname}
+												defaultValue={user.spouse.spouseLastname}
 											/>
 										</div>
 									</div>
@@ -187,7 +187,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="First name"
-												defaultValue={user.spouse[0].spouseFirstname}
+												defaultValue={user.spouse.spouseFirstname}
 											/>
 										</div>
 
@@ -197,7 +197,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Middle name"
-												defaultValue={user.spouse[0].spouseMiddlename}
+												defaultValue={user.spouse.spouseMiddlename}
 											/>
 										</div>
 									</div>
@@ -209,7 +209,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="123-456-7890"
-												defaultValue={user.spouse[0].spouseDayPhone}
+												defaultValue={user.spouse.spouseDayPhone}
 											/>
 										</div>
 
@@ -219,7 +219,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="123-456-7890"
-												defaultValue={user.spouse[0].spouseMobile}
+												defaultValue={user.spouse.spouseMobile}
 											/>
 										</div>
 									</div>
@@ -230,7 +230,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Email"
-												defaultValue={user.spouse[0].spouseEmail}
+												defaultValue={user.spouse.spouseEmail}
 											/>
 										</div>
 									</div>
@@ -249,7 +249,7 @@ export class Form extends React.Component {
 												name="employerName"
 												className="form-control"
 												placeholder="Employer"
-												defaultValue={user[0].employerName}
+												defaultValue={user.employerName}
 											/>
 										</div>
 									</div>
@@ -263,7 +263,7 @@ export class Form extends React.Component {
 												className="form-control"
 												id="inputAddress"
 												placeholder="Number, Street name"
-												defaultValue={user[0].employerAddress}
+												defaultValue={user.employerAddress}
 											/>
 										</div>
 
@@ -274,7 +274,7 @@ export class Form extends React.Component {
 												name="employerApartment"
 												className="form-control"
 												placeholder="Suite #"
-												defaultValue={user[0].employerApartment}
+												defaultValue={user.employerApartment}
 											/>
 										</div>
 									</div>
@@ -286,7 +286,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												name="employerCity"
-												defaultValue={user[0].employerCity}
+												defaultValue={user.employerCity}
 											/>
 										</div>
 
@@ -296,7 +296,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												name="employerState"
-												defaultValue={user[0].employerState}
+												defaultValue={user.employerState}
 											/>
 										</div>
 									</div>
@@ -309,7 +309,7 @@ export class Form extends React.Component {
 												placeholder="Zip"
 												name="employerZipCode"
 												maxLength="5"
-												defaultValue={user[0].employerZipCode}
+												defaultValue={user.employerZipCode}
 											/>
 										</div>
 										<div className="col-md mb-3">
@@ -318,7 +318,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												name="employerCountry"
-												defaultValue={user[0].employerCountry}
+												defaultValue={user.employerCountry}
 											/>
 										</div>
 									</div>
@@ -330,7 +330,7 @@ export class Form extends React.Component {
 												name="employerOccupation"
 												className="form-control"
 												placeholder="Name"
-												defaultValue={user[0].employerOccupation}
+												defaultValue={user.employerOccupation}
 											/>
 										</div>
 									</div>
