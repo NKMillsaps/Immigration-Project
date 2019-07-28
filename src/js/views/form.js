@@ -177,6 +177,7 @@ export class Form extends React.Component {
 												className="form-control"
 												placeholder="Last name"
 												defaultValue={user.spouse.spouseLastname}
+												name="spouseLastname"
 											/>
 										</div>
 									</div>
@@ -188,6 +189,7 @@ export class Form extends React.Component {
 												className="form-control"
 												placeholder="First name"
 												defaultValue={user.spouse.spouseFirstname}
+												name="spouseFirstname"
 											/>
 										</div>
 
@@ -198,6 +200,7 @@ export class Form extends React.Component {
 												className="form-control"
 												placeholder="Middle name"
 												defaultValue={user.spouse.spouseMiddlename}
+												name="spouseMiddlename"
 											/>
 										</div>
 									</div>
@@ -210,6 +213,7 @@ export class Form extends React.Component {
 												className="form-control"
 												placeholder="123-456-7890"
 												defaultValue={user.spouse.spouseDayPhone}
+												name="spouseDayPhone"
 											/>
 										</div>
 
@@ -220,6 +224,7 @@ export class Form extends React.Component {
 												className="form-control"
 												placeholder="123-456-7890"
 												defaultValue={user.spouse.spouseMobile}
+												name="spouseMobile"
 											/>
 										</div>
 									</div>
@@ -231,6 +236,7 @@ export class Form extends React.Component {
 												className="form-control"
 												placeholder="Email"
 												defaultValue={user.spouse.spouseEmail}
+												name="spouseEmail"
 											/>
 										</div>
 									</div>
@@ -261,7 +267,6 @@ export class Form extends React.Component {
 												type="text"
 												name="employerAddress"
 												className="form-control"
-												id="inputAddress"
 												placeholder="Number, Street name"
 												defaultValue={user.employerAddress}
 											/>
@@ -340,8 +345,58 @@ export class Form extends React.Component {
 								<Link to="/green_card_list_selection">
 									<button className="btn btn-primary float-left">Back</button>
 								</Link>
+
+								<div className="form-row">
+									<Link to="/">
+										<button className="btn btn-primary float-left mx-auto p-2">Home</button>
+									</Link>
+									<div className="text-right">
+										<button
+											className="btn btn-primary text-right mx-auto p-2"
+											onClick={() =>
+												actions.updateForm(
+													document.querySelector("[name=email]").value,
+													document.querySelector("[name=username]").value,
+													document.querySelector("[name=lastname]").value,
+													document.querySelector("[name=firstname]").value,
+													document.querySelector("[name=middlename]").value,
+													document.querySelector("[name=dayPhone]").value,
+													document.querySelector("[name=mobile]").value,
+
+													document.querySelector("[name=address]").value,
+													document.querySelector("[name=apartment]").value,
+													document.querySelector("[name=zipCode]").value,
+													document.querySelector("[name=city]").value,
+													document.querySelector("[name=state]").value,
+													document.querySelector("[name=country]").value,
+
+													document.querySelector("[name=spouseLastname]").value,
+													document.querySelector("[name=spouseFirstname]").value,
+													document.querySelector("[name=spouseMiddlename]").value,
+													document.querySelector("[name=spouseDayPhone]").value,
+													document.querySelector("[name=spouseMobile]").value,
+													document.querySelector("[name=spouseEmail]").value,
+
+													document.querySelector("[name=employerName]").value,
+													document.querySelector("[name=employerAddress]").value,
+													document.querySelector("[name=employerApartment]").value,
+													document.querySelector("[name=employerCity]").value,
+													document.querySelector("[name=employerState]").value,
+													document.querySelector("[name=employerZipCode]").value,
+													document.querySelector("[name=employerCountry]").value,
+													document.querySelector("[name=employerOccupation]").value,
+
+													this.props
+												)
+											}>
+											{" "}
+											Submit
+										</button>
+									</div>
+								</div>
+
 								<Link to="/green_card_list_selection">
-									<button className="btn btn-primary">Submit</button>
+									<button className="btn btn-primary">To list selection</button>
 								</Link>
 							</div>
 						</div>
