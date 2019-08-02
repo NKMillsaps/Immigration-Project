@@ -51,6 +51,7 @@ export class Layout extends React.Component {
 									<Route exact path="/register" component={RegisterMain} />
 									<Route path="/loginregister" component={LoginRegister} />
 									<Route path="/options" component={Options} />
+
 									<Route path="/creditcard" component={CreditCard} />
 									<Route path="/single/:theid" component={Single} />
 									<Route path="/green_card_list" component={Green_card_list} />
