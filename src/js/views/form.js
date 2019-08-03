@@ -115,10 +115,9 @@ export class Form extends React.Component {
 											<label htmlFor="validationDefault01">Last Name</label>
 											<input
 												type="text"
-												name="lastname"
+												name="lastname1"
 												className="form-control"
 												placeholder="Last name"
-												defaultValue={user.lastname}
 											/>
 										</div>
 									</div>
@@ -129,8 +128,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="First name"
-												defaultValue={user.firstname}
-												name="firstname"
+												name="firstname1"
 											/>
 										</div>
 										<div className="col-md mb-3">
@@ -139,8 +137,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Middle name"
-												defaultValue={user.middlename}
-												name="middlename"
+												name="middlename1"
 											/>
 										</div>
 									</div>
@@ -150,10 +147,9 @@ export class Form extends React.Component {
 											<label htmlFor="validationDefault01">Last Name</label>
 											<input
 												type="text"
-												name="lastname"
+												name="lastname2"
 												className="form-control"
 												placeholder="Last name"
-												defaultValue={user.lastname}
 											/>
 										</div>
 									</div>
@@ -164,8 +160,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="First name"
-												defaultValue={user.firstname}
-												name="firstname"
+												name="firstname2"
 											/>
 										</div>
 										<div className="col-md mb-3">
@@ -174,8 +169,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Middle name"
-												defaultValue={user.middlename}
-												name="middlename"
+												name="middlename2"
 											/>
 										</div>
 									</div>
@@ -254,8 +248,7 @@ export class Form extends React.Component {
 												type="text"
 												className="form-control"
 												placeholder="Number, Street name"
-												defaultValue={user.address}
-												name="address"
+												name="address1"
 											/>
 										</div>
 									</div>
@@ -265,10 +258,9 @@ export class Form extends React.Component {
 											<label htmlFor="validationDefault06">Apt/Ste/Flr</label>
 											<input
 												type="text"
-												name="apartment"
+												name="apartment1"
 												className="form-control"
 												placeholder="Apt/Ste/Flr #"
-												defaultValue={user.apartment}
 											/>
 										</div>
 
@@ -276,32 +268,29 @@ export class Form extends React.Component {
 											<label htmlFor="validationDefault07">City/Town</label>
 											<input
 												type="text"
-												name="city"
+												name="city1"
 												className="form-control"
 												placeholder="City/Town"
-												defaultValue={user.city}
 											/>
 										</div>
 									</div>
 									<div className="form-row">
 										<div className="col-md mb-3">
-											<label htmlFor="inputState">State</label>
+											<label htmlFor="inputState">State/Territory/Province</label>
 											<input
 												type="text"
 												name="state"
 												className="form-control"
-												placeholder="State"
-												defaultValue={user.state}
+												placeholder="State1"
 											/>
 										</div>
 										<div className="col-md mb-3">
-											<label htmlFor="validationDefault08">Zip code</label>
+											<label htmlFor="validationDefault08">Zip/Postal code</label>
 											<input
 												type="number"
-												name="zipCode"
+												name="zipCode1"
 												className="form-control"
 												placeholder="Zip"
-												defaultValue={user.zipCode}
 											/>
 										</div>
 									</div>
@@ -316,8 +305,7 @@ export class Form extends React.Component {
 													type="text"
 													className="form-control"
 													placeholder="Number, Street name"
-													defaultValue={user.address}
-													name="address"
+													name="address2"
 												/>
 											</div>
 										</div>
@@ -326,10 +314,9 @@ export class Form extends React.Component {
 												<label htmlFor="validationDefault06">Apt/Ste/Flr</label>
 												<input
 													type="text"
-													name="apartment"
+													name="apartment2"
 													className="form-control"
 													placeholder="Apt/Ste/Flr #"
-													defaultValue={user.apartment}
 												/>
 											</div>
 
@@ -337,10 +324,9 @@ export class Form extends React.Component {
 												<label htmlFor="validationDefault07">City/Town</label>
 												<input
 													type="text"
-													name="city"
+													name="city2"
 													className="form-control"
 													placeholder="City/Town"
-													defaultValue={user.city}
 												/>
 											</div>
 										</div>
@@ -349,20 +335,18 @@ export class Form extends React.Component {
 												<label htmlFor="inputState">State/Province/Territory</label>
 												<input
 													type="text"
-													name="state"
+													name="state2"
 													className="form-control"
 													placeholder="State"
-													defaultValue={user.state}
 												/>
 											</div>
 											<div className="col-md mb-3">
 												<label htmlFor="validationDefault08">Postal/Zip code</label>
 												<input
 													type="number"
-													name="zipCode"
+													name="zipCode2"
 													className="form-control"
 													placeholder="Zip"
-													defaultValue={user.zipCode}
 												/>
 											</div>
 										</div>
@@ -378,7 +362,7 @@ export class Form extends React.Component {
 													className="form-control"
 													placeholder="Number, Street name"
 													defaultValue={user.address}
-													name="address"
+													name="address3"
 												/>
 											</div>
 										</div>
