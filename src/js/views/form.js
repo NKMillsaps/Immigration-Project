@@ -18,7 +18,7 @@ export class Form extends React.Component {
 					console.log(name);
 					console.log(form);
 					return (
-						<div className="card mx-auto">
+						<div className="card bg-secondary  mx-auto p-2">
 							<div className="row">
 								<div className="col card-header">
 									<h1>{form.forms_name}</h1>
@@ -141,38 +141,6 @@ export class Form extends React.Component {
 											/>
 										</div>
 									</div>
-									<hr />
-									<div className="form-row">
-										<div className="col-md mb-3">
-											<label htmlFor="validationDefault01">Last Name</label>
-											<input
-												type="text"
-												name="lastname2"
-												className="form-control"
-												placeholder="Last name"
-											/>
-										</div>
-									</div>
-									<div className="form-row">
-										<div className="col-md mb-3">
-											<label htmlFor="validationDefault02">First Name</label>
-											<input
-												type="text"
-												className="form-control"
-												placeholder="First name"
-												name="firstname2"
-											/>
-										</div>
-										<div className="col-md mb-3">
-											<label htmlFor="validationDefault03">Middle Name (Patronimic)</label>
-											<input
-												type="text"
-												className="form-control"
-												placeholder="Middle name"
-												name="middlename2"
-											/>
-										</div>
-									</div>
 
 									<hr />
 									<div className="form-row">
@@ -238,7 +206,7 @@ export class Form extends React.Component {
 										</div>
 									</div>
 									<div className="form-row">
-										<h3>Additional Addresses for the past 5 years (in or outside the USA)</h3>
+										<h3>Part IV. Last address outside of the USA</h3>
 									</div>
 
 									<div className="form-row">
@@ -294,298 +262,175 @@ export class Form extends React.Component {
 											/>
 										</div>
 									</div>
-									<div>
-										<div className="form-row">
-											<h3>Address III.</h3>
-										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="inputAddress">Number and Street Name</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="Number, Street name"
-													name="address2"
-												/>
-											</div>
-										</div>
-										<div className="form-row">
-											<div className="col-md-2 mb-3">
-												<label htmlFor="validationDefault06">Apt/Ste/Flr</label>
-												<input
-													type="text"
-													name="apartment2"
-													className="form-control"
-													placeholder="Apt/Ste/Flr #"
-												/>
-											</div>
+									<hr />
 
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault07">City/Town</label>
-												<input
-													type="text"
-													name="city2"
-													className="form-control"
-													placeholder="City/Town"
-												/>
-											</div>
+									<div className="form-row">
+										<h3>Part III. Information About Your Spouse</h3>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault10">Spouse Last Name (Family name)</label>
+											<input
+												type="text"
+												className="form-control"
+												placeholder="Last name"
+												defaultValue={user.spouse.spouseLastname}
+												name="spouseLastname"
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="inputState">State/Province/Territory</label>
-												<input
-													type="text"
-													name="state2"
-													className="form-control"
-													placeholder="State"
-												/>
-											</div>
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault08">Postal/Zip code</label>
-												<input
-													type="number"
-													name="zipCode2"
-													className="form-control"
-													placeholder="Zip"
-												/>
-											</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault11">Spouse First Name</label>
+											<input
+												type="text"
+												className="form-control"
+												placeholder="First name"
+												defaultValue={user.spouse.spouseFirstname}
+												name="spouseFirstname"
+											/>
 										</div>
-										<hr />
-										<div className="form-row">
-											<h3>Address IV.</h3>
-										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="inputAddress">Number and Street Name</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="Number, Street name"
-													defaultValue={user.address}
-													name="address3"
-												/>
-											</div>
-										</div>
-										<div className="form-row">
-											<div className="col-md-2 mb-3">
-												<label htmlFor="validationDefault06">Apt/Ste/Flr</label>
-												<input
-													type="text"
-													name="apartment"
-													className="form-control"
-													placeholder="Apt/Ste/Flr #"
-													defaultValue={user.apartment}
-												/>
-											</div>
 
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault07">City/Town</label>
-												<input
-													type="text"
-													name="city"
-													className="form-control"
-													placeholder="City/Town"
-													defaultValue={user.city}
-												/>
-											</div>
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault12">Spouse Middle Name (Patronimic)</label>
+											<input
+												type="text"
+												className="form-control"
+												placeholder="Middle name"
+												defaultValue={user.spouse.spouseMiddlename}
+												name="spouseMiddlename"
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="inputState">State/Province/Territory</label>
-												<input
-													type="text"
-													name="state"
-													className="form-control"
-													placeholder="State"
-													defaultValue={user.state}
-												/>
-											</div>
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault08">Postal/Zip code</label>
-												<input
-													type="number"
-													name="zipCode"
-													className="form-control"
-													placeholder="Zip"
-													defaultValue={user.zipCode}
-												/>
-											</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault13">Spouse Daytime Phone Number</label>
+											<input
+												type="text"
+												className="form-control"
+												placeholder="123-456-7890"
+												defaultValue={user.spouse.spouseDayPhone}
+												name="spouseDayPhone"
+											/>
 										</div>
-										<hr />
-										<div className="form-row">
-											<h3>Part III. Information About Your Spouse</h3>
-										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault10">
-													Spouse Last Name (Family name)
-												</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="Last name"
-													defaultValue={user.spouse.spouseLastname}
-													name="spouseLastname"
-												/>
-											</div>
-										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault11">Spouse First Name</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="First name"
-													defaultValue={user.spouse.spouseFirstname}
-													name="spouseFirstname"
-												/>
-											</div>
 
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault12">
-													Spouse Middle Name (Patronimic)
-												</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="Middle name"
-													defaultValue={user.spouse.spouseMiddlename}
-													name="spouseMiddlename"
-												/>
-											</div>
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault14">Spouse Mobile Phone Number</label>
+											<input
+												type="text"
+												className="form-control"
+												placeholder="123-456-7890"
+												defaultValue={user.spouse.spouseMobile}
+												name="spouseMobile"
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault13">Spouse Daytime Phone Number</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="123-456-7890"
-													defaultValue={user.spouse.spouseDayPhone}
-													name="spouseDayPhone"
-												/>
-											</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="inputEmail">Spouse Email Address</label>
+											<input
+												type="text"
+												className="form-control"
+												placeholder="Email"
+												defaultValue={user.spouse.spouseEmail}
+												name="spouseEmail"
+											/>
+										</div>
+									</div>
+									<hr />
+									<div className="form-row">
+										<h3>Part IV. Employement History</h3>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault15">
+												Name of Employer/Company/Organization
+											</label>
+											<input
+												type="text"
+												name="employerName"
+												className="form-control"
+												placeholder="Employer"
+												defaultValue={user.employerName}
+											/>
+										</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="inputAddress">Infornation about your employement</label>
+											<input
+												type="text"
+												name="employerAddress"
+												className="form-control"
+												placeholder="Number, Street name"
+												defaultValue={user.employerAddress}
+											/>
+										</div>
 
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault14">Spouse Mobile Phone Number</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="123-456-7890"
-													defaultValue={user.spouse.spouseMobile}
-													name="spouseMobile"
-												/>
-											</div>
+										<div className="col-md-2 mb-3">
+											<label htmlFor="inputAddress">Suite</label>
+											<input
+												type="text"
+												name="employerApartment"
+												className="form-control"
+												placeholder="Suite #"
+												defaultValue={user.employerApartment}
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="inputEmail">Spouse Email Address</label>
-												<input
-													type="text"
-													className="form-control"
-													placeholder="Email"
-													defaultValue={user.spouse.spouseEmail}
-													name="spouseEmail"
-												/>
-											</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault16">City/Town</label>
+											<input
+												type="text"
+												className="form-control"
+												name="employerCity"
+												defaultValue={user.employerCity}
+											/>
 										</div>
-										<hr />
-										<div className="form-row">
-											<h3>Part IV. Employement History</h3>
-										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault15">
-													Name of Employer/Company/Organization
-												</label>
-												<input
-													type="text"
-													name="employerName"
-													className="form-control"
-													placeholder="Employer"
-													defaultValue={user.employerName}
-												/>
-											</div>
-										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="inputAddress">Employer Address</label>
-												<input
-													type="text"
-													name="employerAddress"
-													className="form-control"
-													placeholder="Number, Street name"
-													defaultValue={user.employerAddress}
-												/>
-											</div>
 
-											<div className="col-md-2 mb-3">
-												<label htmlFor="inputAddress">Suite</label>
-												<input
-													type="text"
-													name="employerApartment"
-													className="form-control"
-													placeholder="Suite #"
-													defaultValue={user.employerApartment}
-												/>
-											</div>
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault17">Province/Teritory/Region/Area</label>
+											<input
+												type="text"
+												className="form-control"
+												name="employerState"
+												defaultValue={user.employerState}
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault16">City/Town</label>
-												<input
-													type="text"
-													className="form-control"
-													name="employerCity"
-													defaultValue={user.employerCity}
-												/>
-											</div>
-
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault17">
-													Province/Teritory/Region/Area
-												</label>
-												<input
-													type="text"
-													className="form-control"
-													name="employerState"
-													defaultValue={user.employerState}
-												/>
-											</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault17">Zip code/Postal code</label>
+											<input
+												type="number"
+												className="form-control"
+												placeholder="Zip"
+												name="employerZipCode"
+												maxLength="5"
+												defaultValue={user.employerZipCode}
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault17">Zip code/Postal code</label>
-												<input
-													type="number"
-													className="form-control"
-													placeholder="Zip"
-													name="employerZipCode"
-													maxLength="5"
-													defaultValue={user.employerZipCode}
-												/>
-											</div>
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault18">Country</label>
-												<input
-													type="text"
-													className="form-control"
-													name="employerCountry"
-													defaultValue={user.employerCountry}
-												/>
-											</div>
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault18">Country</label>
+											<input
+												type="text"
+												className="form-control"
+												name="employerCountry"
+												defaultValue={user.employerCountry}
+											/>
 										</div>
-										<div className="form-row">
-											<div className="col-md mb-3">
-												<label htmlFor="validationDefault19">Your Ocupation/Position</label>
-												<input
-													type="text"
-													name="employerOccupation"
-													className="form-control"
-													placeholder="Name"
-													defaultValue={user.employerOccupation}
-												/>
-											</div>
+									</div>
+									<div className="form-row">
+										<div className="col-md mb-3">
+											<label htmlFor="validationDefault19">Your Ocupation/Position</label>
+											<input
+												type="text"
+												name="employerOccupation"
+												className="form-control"
+												placeholder="Name"
+												defaultValue={user.employerOccupation}
+											/>
 										</div>
 									</div>
 								</form>
@@ -601,7 +446,7 @@ export class Form extends React.Component {
 										</Link>
 										<div className="text-right">
 											<button
-												className="btn btn-primary text-right mx-auto p-2"
+												className="btn btn-warning text-right mx-auto p-2"
 												onClick={() =>
 													actions.updateForm(
 														document.querySelector("[name=email]").value,
@@ -612,12 +457,23 @@ export class Form extends React.Component {
 														document.querySelector("[name=dayPhone]").value,
 														document.querySelector("[name=mobile]").value,
 
+														document.querySelector("[name=lastname1]").value,
+														document.querySelector("[name=firstname1]").value,
+														document.querySelector("[name=middlename1]").value,
+
 														document.querySelector("[name=address]").value,
 														document.querySelector("[name=apartment]").value,
 														document.querySelector("[name=zipCode]").value,
 														document.querySelector("[name=city]").value,
 														document.querySelector("[name=state]").value,
 														document.querySelector("[name=country]").value,
+
+														document.querySelector("[name=address1]").value,
+														document.querySelector("[name=apartment1]").value,
+														document.querySelector("[name=zipCode1]").value,
+														document.querySelector("[name=city1]").value,
+														document.querySelector("[name=state1]").value,
+														document.querySelector("[name=country1]").value,
 
 														document.querySelector("[name=spouseLastname]").value,
 														document.querySelector("[name=spouseFirstname]").value,

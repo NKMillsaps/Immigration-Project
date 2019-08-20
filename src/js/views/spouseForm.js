@@ -13,7 +13,7 @@ export class SpouseForm extends React.Component {
 					{({ actions }) => {
 						return (
 							<React.Fragment>
-								<div className="form-group mx-auto p-2">
+								<div className="form-group text-white mx-auto p-2">
 									<div className="card-header text-center">
 										<h4>Spouse Information</h4>
 									</div>
@@ -94,7 +94,7 @@ export class SpouseForm extends React.Component {
 										</Link>
 										<div className="text-right">
 											<button
-												className="btn btn-primary text-right mx-auto p-2"
+												className="btn btn-primary mx-auto p-2"
 												onClick={() =>
 													actions.addSpouse(
 														document.querySelector("[name=spouseEmail]").value,

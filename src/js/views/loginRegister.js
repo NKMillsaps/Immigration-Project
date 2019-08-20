@@ -13,7 +13,7 @@ export class LoginRegister extends React.Component {
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return (
-							<div className="card text-white text-center bg-primary mb-3">
+							<div className="card text-dark text-center bg-secondary mb-3">
 								<div className="card-body">
 									<h4 className="card-title">If you are existing customer please LOG IN</h4>
 									<hr />
@@ -48,7 +48,7 @@ export class LoginRegister extends React.Component {
 					}}
 				</Context.Consumer>
 
-				<div className="card text-white bg-primary mb-3">
+				<div className="card text-dark bg-secondary mb-3">
 					<div className="card-body text-center">
 						<h4 className="card-title">If you are a new customer please</h4>
 						<hr />

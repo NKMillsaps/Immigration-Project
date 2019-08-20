@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<div className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+			<div className="navbar sticky-top navbar-expand-lg navbar-dark bg-light">
 				<a className="navbar-brand" href="#">
 					<Link to="/">
 						<img src={logo} />
@@ -73,9 +73,7 @@ export class Navbar extends React.Component {
 										</Link>
 									) : (
 										<Link to="/loginRegister">
-											<button
-												className="btn btn-primary m-3"
-												onClick={() => actions.logoutUser()}>
+											<button className="btn btn-info m-3" onClick={() => actions.logoutUser()}>
 												Logout
 											</button>
 										</Link>
