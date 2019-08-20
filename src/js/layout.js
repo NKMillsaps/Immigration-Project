@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 //views
 import { Home } from "./views/home";
 import { Form } from "./views/form";
+import { Form_i539 } from "./views/form_i539";
 import { FormCopy } from "./views/form_copy";
 import { RegisterMain } from "./views/registerMain";
 import { SpouseForm } from "./views/spouseForm";
@@ -48,6 +49,7 @@ export class Layout extends React.Component {
 									<Route exact path="/address-form" component={AddressForm} />
 									<Route exact path="/doctors" component={Doctors} />
 									<Route exact path="/spouse" component={SpouseForm} />
+									<Route exact path="/form_i539" component={Form_i539} />
 									<Route exact path="/register" component={RegisterMain} />
 									<Route path="/loginregister" component={LoginRegister} />
 									<Route path="/options" component={Options} />

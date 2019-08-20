@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<div className="navbar sticky-top navbar-expand-lg navbar-dark bg-light">
+			<div className="navbar sticky-top text-white navbar-expand-lg navbar-dark bg-primary">
 				<a className="navbar-brand" href="#">
 					<Link to="/">
 						<img src={logo} />
@@ -15,23 +15,23 @@ export class Navbar extends React.Component {
 				</a>
 				<div className="float-right">
 					<ul className="navbar-nav">
-						<li className="nav-item">
-							<a className="nav-link active text-primary" href="##how-it-works">
+						<li className="nav-item active">
+							<a className="nav-link active" href="##how-it-works">
 								Contacts
 							</a>
 						</li>
-						<li className="nav-item">
-							<Link className="nav-link text-primary" to="/doctors">
+						<li className="nav-item active">
+							<Link className="nav-link" to="/doctors">
 								Doctors
 							</Link>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link text-primary" href="#">
+						<li className="nav-item active">
+							<a className="nav-link" href="#">
 								Translation Agencies
 							</a>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link text-primary" href="https://www.uscis.gov">
+						<li className="nav-item active">
+							<a className="nav-link" href="https://www.uscis.gov">
 								USCIS{" "}
 							</a>
 						</li>
@@ -55,8 +55,8 @@ export class Navbar extends React.Component {
 							</div>
 						</li>
 
-						<li className="nav-item">
-							<a className="nav-link text-primary" href="/docs/4.0/about/overview/">
+						<li className="nav-item active">
+							<a className="nav-link" href="/docs/4.0/about/overview/">
 								About
 							</a>
 						</li>
@@ -69,11 +69,13 @@ export class Navbar extends React.Component {
 								<form className="form-inline ">
 									{!store.token ? (
 										<Link to="/loginRegister">
-											<button className="btn btn-primary m-3">Login/Register</button>
+											<button className="btn btn-secondary text-dark m-3">Login/Register</button>
 										</Link>
 									) : (
 										<Link to="/loginRegister">
-											<button className="btn btn-info m-3" onClick={() => actions.logoutUser()}>
+											<button
+												className="btn btn-secondary m-3"
+												onClick={() => actions.logoutUser()}>
 												Logout
 											</button>
 										</Link>
