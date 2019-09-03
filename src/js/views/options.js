@@ -1,6 +1,6 @@
 import React from "react";
 import { Context } from "../store/appContext";
-import "../../styles/home.scss";
+// import "../../styles/options.scss";
 import { Link } from "react-router-dom";
 
 export class Options extends React.Component {
@@ -35,11 +35,11 @@ export class Options extends React.Component {
 												</Link>
 											) : (
 												<Link to="/loginregister">
-													<button_option
+													<button1
 														className="btn btn-primary"
 														onClick={() => actions.addApplication()}>
 														Apply for a {"green card"}
-													</button_option>
+													</button1>
 												</Link>
 											)}
 										</div>
@@ -59,7 +59,7 @@ export class Options extends React.Component {
 										</div>
 										<div className="card-footer text-center mt-5">
 											<Link to="/form_i539">
-												<button_option className="btn btn-primary">Apply Here</button_option>
+												<button1 className="btn btn-primary">Apply Here</button1>
 											</Link>
 										</div>
 									</div>

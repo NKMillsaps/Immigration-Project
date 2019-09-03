@@ -30,7 +30,7 @@ export class LoginRegister extends React.Component {
 										<input name="email" type="text" className="form-control" placeholder="Email" />
 									</div>
 
-									<button_login
+									<button
 										onClick={() =>
 											actions.loginUser(
 												document.querySelector("[name=username]").value,
@@ -41,7 +41,7 @@ export class LoginRegister extends React.Component {
 										className="btn btn-primary">
 										{" "}
 										LOG IN
-									</button_login>
+									</button>
 								</div>
 							</div>
 						);
@@ -53,9 +53,9 @@ export class LoginRegister extends React.Component {
 						<h4 className="card-title">If you are a new customer please</h4>
 						<hr />
 						<Link to="/register">
-							<button_login id="button1" className="btn btn-primary">
+							<button id="button1" className="btn btn-primary">
 								REGISTER
-							</button_login>
+							</button>
 						</Link>
 					</div>
 				</div>
