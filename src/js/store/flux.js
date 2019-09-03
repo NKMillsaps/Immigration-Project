@@ -49,7 +49,7 @@ const getState = ({ getStore, setStore }) => {
 				employerCountry,
 				employerOccupation
 			) => {
-				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/application/forms", {
+				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/application/forms", {
 					method: "PUT",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -90,7 +90,7 @@ const getState = ({ getStore, setStore }) => {
 				console.log("added user");
 
 				fetch(
-					"https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person/" +
+					"https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person/" +
 						store.tempLoggedUser.id,
 					{
 						method: "PUT",
@@ -101,7 +101,7 @@ const getState = ({ getStore, setStore }) => {
 						})
 					}
 				).then(getDataUpdated => {
-					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person")
+					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person")
 						.then(response => response.json())
 						.then(data => {
 							store.person = data;
@@ -120,7 +120,7 @@ const getState = ({ getStore, setStore }) => {
 			updatePersonAddress: (address, apartment, zipCode, city, state, country, props) => {
 				const store = getStore();
 				fetch(
-					"https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person/" +
+					"https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person/" +
 						store.tempLoggedUser.id,
 					{
 						method: "PUT",
@@ -137,7 +137,7 @@ const getState = ({ getStore, setStore }) => {
 						})
 					}
 				).then(getDataUpdated => {
-					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person")
+					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person")
 						.then(response => response.json())
 						.then(data => {
 							store.person = data;
@@ -150,7 +150,7 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				console.log("added user");
 
-				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person", {
+				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -165,7 +165,7 @@ const getState = ({ getStore, setStore }) => {
 						application: []
 					})
 				}).then(getDataUpdated => {
-					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person")
+					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person")
 						.then(response => response.json())
 						.then(data => {
 							store.person = data;
@@ -183,7 +183,7 @@ const getState = ({ getStore, setStore }) => {
 				let loggedUser = store.person.find(item => {
 					return item.email === email;
 				});
-				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/login", {
+				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/login", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -216,7 +216,7 @@ const getState = ({ getStore, setStore }) => {
 			) => {
 				const store = getStore();
 
-				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/spouse", {
+				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/spouse", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -236,7 +236,7 @@ const getState = ({ getStore, setStore }) => {
 						});
 					})
 					.then(getDataUpdated => {
-						fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/spouse")
+						fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/spouse")
 							.then(response => response.json())
 							.then(data => {
 								// store.spouse = data;
@@ -246,7 +246,7 @@ const getState = ({ getStore, setStore }) => {
 
 					.then(updatePersonSpouse => {
 						fetch(
-							"https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person/" +
+							"https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person/" +
 								store.tempLoggedUser.id,
 							{
 								method: "PUT",
@@ -259,7 +259,7 @@ const getState = ({ getStore, setStore }) => {
 						);
 					})
 					.then(getDataUpdated => {
-						fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person")
+						fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person")
 							.then(response => response.json())
 							.then(updatePerson => {
 								// store.person = data;
@@ -272,14 +272,14 @@ const getState = ({ getStore, setStore }) => {
 			addApplication: application_name => {
 				const store = getStore();
 
-				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/application", {
+				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/application", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						application_name: application_name
 					})
 				}).then(getDataUpdated => {
-					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/application")
+					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/application")
 						.then(response => response.json())
 						.then(data => {
 							store.application = data;
@@ -291,14 +291,14 @@ const getState = ({ getStore, setStore }) => {
 			addForms: forms_name => {
 				const store = getStore();
 
-				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/forms", {
+				fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/forms", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						forms_name: forms_name
 					})
 				}).then(getDataUpdated => {
-					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/forms")
+					fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/forms")
 						.then(response => response.json())
 						.then(data => {
 							store.forms = data;

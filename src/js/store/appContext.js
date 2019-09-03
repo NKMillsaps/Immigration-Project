@@ -27,28 +27,28 @@ const injectContext = PassedComponent => {
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here
 			 **/
-			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/person")
+			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/person")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
 					store.person = data;
 					this.setState({ store });
 				});
-			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/spouse")
+			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/spouse")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
 					store.spouse = data;
 					this.setState({ store });
 				});
-			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/application")
+			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/application")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
 					store.application = data;
 					this.setState({ store });
 				});
-			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us0.gitpod.io/forms")
+			fetch("https://3000-a98fb2da-d48e-4e32-a5c9-a80fd5cb131b.ws-us1.gitpod.io/forms")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;

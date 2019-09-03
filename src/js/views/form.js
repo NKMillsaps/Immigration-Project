@@ -448,7 +448,7 @@ export class Form extends React.Component {
 											<button
 												className="btn btn-warning text-right mx-auto p-2"
 												onClick={() =>
-													actions.updateForm(
+													actions.updatePersonForm(
 														document.querySelector("[name=email]").value,
 														document.querySelector("[name=username]").value,
 														document.querySelector("[name=lastname]").value,
