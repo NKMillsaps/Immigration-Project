@@ -35,11 +35,11 @@ export class Options extends React.Component {
 												</Link>
 											) : (
 												<Link to="/loginregister">
-													<button
+													<button_option
 														className="btn btn-primary"
 														onClick={() => actions.addApplication()}>
 														Apply for a {"green card"}
-													</button>
+													</button_option>
 												</Link>
 											)}
 										</div>
@@ -59,7 +59,7 @@ export class Options extends React.Component {
 										</div>
 										<div className="card-footer text-center mt-5">
 											<Link to="/form_i539">
-												<button className="btn btn-primary">Apply Here</button>
+												<button_option className="btn btn-primary">Apply Here</button_option>
 											</Link>
 										</div>
 									</div>
